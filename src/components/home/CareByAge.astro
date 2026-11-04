@@ -1,0 +1,92 @@
+---
+// Care by age (spec 4.8), the signature: the life stages hang on one teal line (one practice along a life).
+// Vertical rail on phone, horizontal line across four columns on desktop. Each row names the doctor who leads it.
+// Motion #7: the line draws (scaleY / scaleX) as it scrolls into view, CSS only, under @supports + no-preference.
+// Reduced motion or no support: the full line, static. Nothing starts hidden but the decorative line itself.
+// Data: ageBands (sample ranges; each doctor confirms them).
+// Round 10 (design plan 4.3, desktop only; phone unchanged): from 64rem each stage is a card hanging from the line
+// (.age-card is display: contents on phone, so the phone grid is untouched): a tall arch photo, the age range as a badge
+// on a light tint (indigo text, AA), and "Led by" as doctor chips (round photo + name, 44 px tall, stacked). The node on
+// the line fills teal. Hover/focus lifts the card. The line draw stays the page's one signature motion (U14.10).
+import Section from '../Section.astro'
+import PhotoSlot from '../PhotoSlot.astro'
+import { ageBands, doctorBySlug, practice } from '../../data/practice'
+---
+<Section id="care" tone="indigo" class="care-dark">
+  <div data-live="care" class="live-dark" aria-hidden="true"><canvas></canvas></div>
+  <p class="eyebrow !text-aqua">Care by age</p>
+      <h2 class="mt-2 text-[1.76rem] leading-[1.12] lg:text-[2.47rem]">Care by age</h2>
+  <p class="mt-2 max-w-[44ch] text-[1rem] lg:mt-3 lg:text-[1.18rem]">From newborns to grandparents, one practice.</p>
+  <ol class="age-line relative mt-5 grid gap-4 lg:mt-10 lg:grid-cols-4 lg:gap-6">
+    <span aria-hidden="true" class="age-line__rule absolute bottom-6 left-[15px] top-2 w-0.5 bg-indigo/40 lg:inset-x-0 lg:bottom-auto lg:top-[5px] lg:h-0.5 lg:w-auto"></span>
+    {ageBands.map(b => {
+      const docs = b.doctors.map(doctorBySlug).filter(d => d !== undefined)
+      return (
+        <li class="age-stage relative grid grid-cols-[2rem_3.5rem_1fr] gap-x-3 lg:block">
+          <span aria-hidden="true" class="age-node relative z-10 ml-[10px] mt-2 block size-3 rounded-t-full border-2 border-indigo bg-white lg:ml-0 lg:mt-0"></span>
+          <div class="age-card contents">
+          <PhotoSlot fact={b.photo} shape="arch" compact class="age-photo h-16 w-14 lg:h-[9rem] lg:w-full" width={480} height={360} />
+          <div class="age-text lg:mt-4">
+            <p class="age-range font-semibold text-indigo">{b.range}</p>
+            <h3 class="text-[1.29rem] leading-tight lg:text-[1.41rem]">{b.title}</h3>
+            <p class="age-desc mt-0.5 text-[0.94rem] leading-snug lg:mt-1 lg:text-base">{b.line}</p>
+            <p class="age-led max-lg:flex max-lg:flex-wrap max-lg:items-center text-[0.82rem] lg:text-[0.88rem]"><span class="age-led__label">Led by </span>{docs.map((d, i) => (<>{i > 0 && <span class="age-or"> or </span>}<a href={`/doctors/${d.slug}`} class="age-chip inline-flex min-h-11 items-center font-medium text-teal-deep underline underline-offset-4"><img src={d.img} alt="" width="56" height="56" loading="lazy" class="age-chip__img hidden" />{d.name}</a></>))}</p>
+          </div>
+          </div>
+        </li>
+      )
+    })}
+  </ol>
+  {practice.demo && <p class="mt-4 text-[0.82rem] text-muted">Sample ranges for the design demo. The doctors confirm every line before launch.</p>}
+</Section>
+<style>
+  /* Round 14, council: the one new dark band (middle of the long light run). Midnight ground, AQUA only (gold is the
+     action colour and stays on 'What brings you in?'). Contrast on #17123a: white 17:1, on-dark 10.5:1, aqua 8.6:1. */
+  :global(.care-dark) { position: relative; isolation: isolate; overflow: hidden; background: var(--c3-base); }
+  :global(.care-dark)::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(50% 60% at 100% 0%, rgb(95 196 196 / .2), transparent 70%), radial-gradient(40% 50% at 0% 100%, rgb(95 196 196 / .1), transparent 70%); }
+  .age-line__rule { background: linear-gradient(90deg, var(--c3-primary), rgb(95 196 196 / .35)) !important; }
+  .age-node { border-color: var(--c3-primary) !important; background: var(--c3-base) !important; }
+  .age-range { color: var(--c3-primary) !important; }
+  .age-desc { color: var(--color-on-dark); }
+  /* Live loop (round 15): a light travels the timeline (top to bottom on phone, left to right on desktop) and each
+     age node glows as it passes (6 s). Paint-only on a 2 px line; pausable; off under reduced motion. */
+  @media (prefers-reduced-motion: no-preference) {
+    .age-line::after { content: ''; position: absolute; z-index: 5; pointer-events: none; inset-block: .5rem 1.5rem; inset-inline-start: 14px; inline-size: 4px; border-radius: 4px; background: linear-gradient(180deg, transparent, rgb(255 255 255 / .95), var(--c3-primary), transparent) no-repeat; background-size: 100% 22%; box-shadow: 0 0 10px rgb(95 196 196 / .0); animation: age-travel-y 6s cubic-bezier(.45, 0, .55, 1) infinite; }
+    @keyframes age-travel-y { from { background-position: 0 -30%; } to { background-position: 0 130%; } }
+    .age-node { animation: age-node 6s ease-in-out infinite; }
+    .age-stage:nth-of-type(1) .age-node { animation-delay: 0s; }
+    .age-stage:nth-of-type(2) .age-node { animation-delay: 1.4s; }
+    .age-stage:nth-of-type(3) .age-node { animation-delay: 2.8s; }
+    .age-stage:nth-of-type(4) .age-node { animation-delay: 4.2s; }
+    @keyframes age-node { 0%, 30%, 100% { box-shadow: 0 0 0 0 rgb(95 196 196 / 0); } 8% { box-shadow: 0 0 0 6px rgb(95 196 196 / .3), 0 0 14px rgb(95 196 196 / .9); } }
+    @media (min-width: 64rem) {
+      .age-line::after { inset-block: 4px auto; inset-inline: 0; block-size: 4px; inline-size: auto; background: linear-gradient(90deg, transparent, rgb(255 255 255 / .95), var(--c3-primary), transparent) no-repeat; background-size: 22% 100%; animation-name: age-travel-x; }
+      @keyframes age-travel-x { from { background-position: -30% 0; } to { background-position: 130% 0; } }
+      @keyframes age-node { 0%, 30%, 100% { box-shadow: 0 0 0 4px var(--c3-base); } 8% { box-shadow: 0 0 0 4px var(--c3-base), 0 0 0 9px rgb(95 196 196 / .35), 0 0 18px rgb(95 196 196 / .9); } }
+    }
+  }
+  .age-led { color: var(--color-on-dark); }
+  .age-led a { color: #fff !important; text-decoration-color: var(--c3-primary) !important; }
+
+  @media (min-width: 64rem) {
+    .age-stage { display: flex; flex-direction: column; }
+    .age-node { background: var(--c3-primary) !important; border-color: var(--c3-primary) !important; box-shadow: 0 0 0 4px var(--c3-base); }
+    .age-card { position: relative; display: flex; flex: 1; flex-direction: column; margin-top: 1.4rem; padding: 1rem 1rem 1.25rem; border: 1px solid rgb(255 255 255 / .1); border-radius: 1.5rem; background: linear-gradient(160deg, rgb(255 255 255 / .07), rgb(255 255 255 / .02)); }
+    .age-card::before { content: ''; position: absolute; inset-block-start: -1.4rem; inset-inline-start: 5px; inline-size: 2px; block-size: 1.4rem; background: rgb(95 196 196 / .5); }
+    .age-text { display: flex; flex: 1; flex-direction: column; margin-top: 1rem; padding-inline: .25rem; }
+    .age-range { display: inline-flex; align-self: flex-start; margin-bottom: .5rem; padding: .3rem .75rem; border: 1px solid rgb(95 196 196 / .35); border-radius: 999px; font-size: .82rem; background: rgb(95 196 196 / .12); }
+    .age-led { display: flex; flex-direction: column; align-items: flex-start; gap: .4rem; margin-top: auto; padding-bottom: 0; padding-top: .9rem; border-top: 1px solid rgb(255 255 255 / .1); min-block-size: 8.5rem; } /* room for two chips, so dividers line up across cards */
+    .age-desc { margin-bottom: 1rem; }
+    .age-text h3 { font-size: 1.29rem; }
+    .age-led__label { font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--c3-primary); }
+    .age-or { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; } /* visually hidden, still read */
+    .age-chip { gap: .55rem; padding: .25rem .9rem .25rem .3rem; border: 1.5px solid rgb(95 196 196 / .55); border-radius: 999px; background: rgb(255 255 255 / .06); color: #fff; } /* keeps the underline + a teal edge: reads as a link */
+    .age-chip:hover { background: rgb(95 196 196 / .15); }
+    .age-chip__img { display: block; inline-size: 2.25rem; block-size: 2.25rem; border-radius: 999px; object-fit: cover; }
+  }
+  @media (min-width: 64rem) and (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .age-card { transition: transform .35s var(--ease-soft), box-shadow .35s var(--ease-soft); }
+    .age-card:is(:hover, :focus-within) { transform: translateY(-4px); box-shadow: var(--shadow-float); }
+  }
+</style>
+<script>import '../../scripts/live3d'</script>

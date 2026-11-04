@@ -1,0 +1,34 @@
+---
+// "Open now" chip. The server renders the plain weekly line (works with no JS, never wrong).
+// A tiny script upgrades it to "Open now until 6 PM" / "Closed, opens Mon 9 AM" in the visitor's clock,
+// using New York time because both offices are there.
+import { weekSummary, type Office } from '../data/practice'
+// fallback: the no-JS text. Default is the week summary; office cards that show the full week pass a short one.
+// After the script runs, data-state is open|closed: global.css adds a dot (filled = open, ring = closed) and the state colour.
+interface Props { office: Office; fallback?: string; class?: string }
+const { office, fallback, class: cls = '' } = Astro.props
+const line = fallback ?? weekSummary(office).map(([d, h]) => `${d}: ${h}`).join('; ')
+---
+<span data-open-now={JSON.stringify(office.open)} class={`status ${cls}`}>{line}</span>
+<script>
+  const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+  const fmt = (h: number) => `${((h + 11) % 12) + 1} ${h < 12 ? 'AM' : 'PM'}`
+  const nyNow = () => {
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map(x => [x.type, x.value]))
+    return { day: DAYS.indexOf(p.weekday), hours: Number(p.hour) + Number(p.minute) / 60 }
+  }
+  document.querySelectorAll<HTMLElement>('[data-open-now]').forEach(el => {
+    try {
+      const open = JSON.parse(el.dataset.openNow || '{}') as Record<string, [number, number] | null>
+      const { day, hours } = nyNow()
+      const today = open[day]
+      if (today && hours >= today[0] && hours < today[1]) { el.textContent = `Open · until ${fmt(today[1])}`; el.dataset.state = 'open'; return }
+      for (let i = 0; i < 7; i++) {
+        const d = (day + i) % 7, h = open[d]
+        if (!h || (i === 0 && hours >= h[0])) continue
+        el.dataset.state = 'closed'
+        el.textContent = `Closed · opens ${i === 0 ? 'today' : i === 1 ? 'tomorrow' : DAYS[d]} ${fmt(h[0])}`; return
+      }
+    } catch { /* keep the static weekly line */ }
+  })
+</script>

@@ -1,0 +1,16 @@
+---
+import Page from '../../layouts/Page.astro'
+import PageHead from '../../components/PageHead.astro'
+import Section from '../../components/Section.astro'
+import OfficeCard from '../../components/OfficeCard.astro'
+import { offices, officeBySlug } from '../../data/practice'
+export function getStaticPaths() { return offices.map(o => ({ params: { slug: o.slug } })) }
+const o = officeBySlug(Astro.params.slug!)!
+const place = o.neighborhood.split(',')[0]
+---
+<Page title={`${o.neighborhood} | AIMSS Family Health`} description={`${o.name}: hours, phone, directions.`}>
+  <PageHead title={`Pediatrics and family medicine in ${place}`} lead={o.addr} eyebrow={o.name} crumbs={[['Locations', '/locations'], [place, `/locations/${o.slug}`]]} />
+  <Section tone="white" label={o.name}>
+    <OfficeCard office={o} detail />
+  </Section>
+</Page>

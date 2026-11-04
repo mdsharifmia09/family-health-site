@@ -1,0 +1,46 @@
+---
+import '../styles/global.css'
+interface Props { title: string; description?: string }
+const { title, description = 'Family medicine and pediatrics for every age, at two offices in Elmhurst and Hicksville.' } = Astro.props
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#2e2860" />
+  </head>
+  <body class="min-h-dvh">
+    <slot />
+    <script>
+      // Scroll reveal (pattern from 02-analysis/base-site-css-js-dissection-2026-11-01.md, section 5).
+      // Content is visible without JS: the hidden start state only applies under html.js. Reduced motion: skipped.
+      const root = document.documentElement
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+        const targets = document.querySelectorAll<HTMLElement>('main section:not(#hero) :is(h2, [data-reveal], .lift, figure, details, .visit-card, .age-card, .ins-feature, .ins-panel, .faq-help)')
+        root.classList.add('js')
+        const io = new IntersectionObserver(entries => {
+          for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) }
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' })
+        targets.forEach(el => {
+          const siblings = el.parentElement ? [...el.parentElement.children] : []
+          el.style.setProperty('--rd', `${Math.min(siblings.indexOf(el), 4) * 70}ms`)
+          el.classList.add('reveal'); io.observe(el)
+        })
+        setTimeout(() => targets.forEach(el => el.classList.add('in')), 4000) // never leave content hidden
+      }
+      // Looping sections (see global.css): on phones/tablets each plays one pass whenever it scrolls into view.
+      const replay = ['care', 'insurance'].map(id => document.getElementById(id)).filter((el): el is HTMLElement => !!el)
+      if ('IntersectionObserver' in window) {
+        const seen = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('is-playing', e.isIntersecting)), { threshold: 0.2 })
+        replay.forEach(el => seen.observe(el))
+      } else replay.forEach(el => el.classList.add('is-playing'))
+    </script>
+  </body>
+</html>
