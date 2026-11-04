@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-07-05",
+  "site": {
+    "name": "Family First Medical",
+    "url": "https://www.familyfirstmedicalny.com/",
+    "type": "MedicalClinic",
+    "description": "Bilingual family medicine and pediatrics practice with offices in Elmhurst, Queens and Hicksville, Long Island, NY. Board-certified physicians Dr. Qikai Yao, MD (pediatrics) and Dr. Liyan Yao, MD (family medicine). Open 7 days across two offices. Medicaid, Medicare and most insurances accepted. Care in English and Chinese; Spanish-speaking staff.",
+    "languages": ["en", "zh", "es"]
+  },
+  "locations": [
+    {
+      "name": "Family First Medical — Elmhurst, Queens",
+      "address": "45-02 82nd Street, Elmhurst, NY 11373",
+      "phone": "+1-718-779-2248",
+      "hours": {
+        "monday": "09:00-18:00",
+        "tuesday": "09:00-18:00",
+        "wednesday": "09:00-18:00",
+        "thursday": "09:00-18:00",
+        "friday": "09:00-18:00",
+        "saturday": "09:00-16:00",
+        "sunday": "09:00-16:00"
+      },
+      "transit": "1 block from M & R subway trains"
+    },
+    {
+      "name": "Family First Medical — Hicksville, Long Island",
+      "address": "101 Jerusalem Avenue, Hicksville, NY 11801",
+      "phone": "+1-516-681-0681",
+      "hours": {
+        "monday": "09:00-18:00",
+        "tuesday": "09:00-18:00",
+        "wednesday": "closed",
+        "thursday": "closed",
+        "friday": "09:00-18:00",
+        "saturday": "09:00-16:00",
+        "sunday": "09:00-16:00"
+      },
+      "transit": "10-minute walk from Hicksville LIRR; free parking"
+    }
+  ],
+  "services": [
+    "Well-child visits",
+    "Newborn care",
+    "Vaccinations",
+    "School & sports physicals",
+    "Developmental screening",
+    "Annual physicals",
+    "Chronic disease management",
+    "Women's health",
+    "Preventive screenings",
+    "Same-day sick visits",
+    "IV therapy (elective wellness)"
+  ],
+  "actions": [
+    {
+      "type": "call",
+      "label": "Call Elmhurst office",
+      "phone": "+1-718-779-2248"
+    },
+    {
+      "type": "call",
+      "label": "Call Hicksville office",
+      "phone": "+1-516-681-0681"
+    },
+    {
+      "type": "link",
+      "label": "Visit website",
+      "url": "https://www.familyfirstmedicalny.com/"
+    }
+  ],
+  "policies": {
+    "appointments": "By phone; new patients welcome",
+    "insurance": "Medicaid, Medicare and most major plans accepted; call to confirm coverage",
+    "ai_access": "AI assistants and answer engines are welcome to read and cite this site; see /robots.txt and /llms.txt"
+  }
+}

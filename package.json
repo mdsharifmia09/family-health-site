@@ -1,23 +1,18 @@
 {
-  "name": "family-first-medical-ny",
-  "private": true,
-  "version": "0.0.1",
+  "name": "family-first-medical-1to1-clone",
+  "version": "1.0.0",
+  "description": "1:1 exact local copy of https://www.familyfirstmedicalny.com/ with all assets and code",
   "type": "module",
+  "main": "server.js",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "check": "astro build && node scripts/check-dist.mjs"
+    "dev": "node server.js",
+    "start": "node server.js"
   },
-  "dependencies": {
-    "@fontsource-variable/figtree": "^5.3.0",
-    "@fontsource-variable/fraunces": "^5.3.0",
-    "@tailwindcss/vite": "^4.3.3",
-    "astro": "^7.4.4",
-    "tailwindcss": "^4.3.3",
-    "three": "0.187.0"
-  },
-  "devDependencies": {
-    "@types/three": "0.187.0"
-  }
+  "keywords": [
+    "family-first-medical",
+    "clone",
+    "local-review"
+  ],
+  "author": "Sakib",
+  "license": "UNLICENSED"
 }

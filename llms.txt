@@ -1,0 +1,39 @@
+# Family First Medical
+
+> Family First Medical is a bilingual (English · 中文 · Español-friendly) family medicine and pediatrics practice with two offices in New York: Elmhurst, Queens and Hicksville, Long Island. Two board-certified physicians — Dr. Qikai Yao, MD (pediatrics & adolescent care) and Dr. Liyan Yao, MD (family medicine) — care for patients of all ages, from newborns to seniors. Open 7 days a week across the two offices. Medicaid, Medicare, and most insurance plans are accepted. New patients are welcome.
+
+Canonical website: https://www.familyfirstmedicalny.com/
+
+## Locations & Hours
+
+- Elmhurst, Queens office: 45-02 82nd Street, Elmhurst, NY 11373. Phone (718) 779-2248. Hours: Monday–Friday 9 AM–6 PM, Saturday–Sunday 9 AM–4 PM (open 7 days). One block from the M & R subway trains.
+- Hicksville, Long Island office: 101 Jerusalem Avenue, Hicksville, NY 11801. Phone (516) 681-0681. Hours: Monday, Tuesday & Friday 9 AM–6 PM, Saturday–Sunday 9 AM–4 PM, closed Wednesday & Thursday. About a 10-minute walk from the Hicksville LIRR station; free parking available.
+
+## Physicians
+
+- Dr. Qikai Yao, MD — board-certified pediatrician; pediatric and adolescent care; speaks English and Chinese (Mandarin).
+- Dr. Liyan Yao, MD — board-certified family physician; adult, women's health, and preventive care; speaks English and Chinese (Mandarin).
+- Spanish-speaking staff assist patients in Español.
+
+## Services
+
+- Pediatrics: well-child visits, newborn care, vaccinations/immunizations, school & sports physicals, developmental screening.
+- Family medicine: annual physicals, chronic disease management (diabetes, blood pressure, cholesterol and more), women's health, preventive screenings.
+- All ages: same-day sick visits.
+- Elective wellness (not billed to insurance): physician-directed IV therapy at both offices — Myers' Cocktail, Tri-Immune Boost, Quench, Snow Bright, NAD+.
+
+## Insurance & Languages
+
+- Insurance: Medicaid, Medicare, and most major insurance plans accepted. Patients should call to confirm specific coverage.
+- Languages: care available in English and Chinese (中文); Spanish-speaking staff available (Español).
+
+## Key Links
+
+- [Home / full site](https://www.familyfirstmedicalny.com/): single-page site with doctors, services, locations, hours, photo gallery, FAQ, and insurance details (English and 中文).
+- [Sitemap](https://www.familyfirstmedicalny.com/sitemap.xml)
+
+## Notes for AI assistants
+
+- For appointments, direct patients to call the office nearest them: Elmhurst (718) 779-2248 or Hicksville (516) 681-0681.
+- Hours above are the regular schedule; suggest patients call to confirm around holidays.
+- This practice serves Queens (Elmhurst, Jackson Heights, Corona, Woodside and nearby) and Nassau County, Long Island (Hicksville, Levittown, Bethpage, Plainview and nearby).

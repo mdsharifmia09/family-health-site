@@ -1,32 +1,79 @@
-# AIMSS Family Health: home page design demo
+# Family First Medical — 1:1 Live Replica
 
-Design demo of a family medicine and pediatrics practice website (home, doctors, locations, contact and draft legal pages), built for AIMSS.
+Exact 100% 1:1 local mirror of the production website [https://www.familyfirstmedicalny.com/](https://www.familyfirstmedicalny.com/).
 
-**Status:** demo. All content is sample content, all photos are stand-in photos (see `public/demo/CREDITS.txt`), the request form does not send anything, and the legal pages are placeholders pending counsel. Not a live site.
+This codebase is isolated in this standalone repository so your existing Astro project (`family-first-medical-ny`) remains 100% untouched.
 
-## Stack
-Astro 7 + Tailwind CSS 4, static output, no third-party scripts. Node 24 LTS (see `.nvmrc`).
+---
+
+## Quick Start (Review in Localhost)
+
+To run the local server:
 
 ```bash
-npm install
-npm run dev      # http://localhost:4321
-npm run build    # static site in dist/
-npm run check    # build, then fail on any external resource or dead internal link
+npm run dev
 ```
 
-## Structure
-- `src/components/`: header and sticky bar; `src/components/home/` has one component per home section.
-- `src/pages/`: the 17 pages.
-- `src/data/`: the single source of truth for offices, doctors and draft legal text.
-- `src/styles/global.css`: design tokens (colours, type, spacing).
-- `public/`: images, favicon, robots and headers. Stand-in photos are in `public/demo/`.
+or directly:
 
-## Design rules
-- Mobile first (390 px), then desktop (1280 px).
-- Brand palette: indigo, teal, gold, cream, lavender. Buttons use a deeper teal than the brand teal so white text passes WCAG AA (5.97:1).
-- Accessibility target: WCAG 2.2 AA (44 px tap targets, visible focus, skip link, no horizontal overflow).
+```bash
+node server.js
+```
 
-## Before launch
-- Replace the stand-in photos with real practice photos.
-- Confirm facts marked as slots in `src/data/` (credentials, ratings, insurance plans, new-patient status) before showing them.
-- Have counsel review the legal pages.
+Open your browser to:
+**[http://localhost:3000](http://localhost:3000)**
+
+To run on a different port (e.g. 8080):
+```bash
+PORT=8080 npm run dev
+```
+
+---
+
+## What is Included
+
+1. **`index.html`**
+   - Exact markup, meta tags, and open graph tags from `familyfirstmedicalny.com`
+   - Complete embedded CSS design tokens, typography, and responsive styles
+   - Bilingual / Trilingual client-side switcher (`EN` · `中文` · `Español`)
+   - Interactive sections:
+     - Intro splash overlay (auto-dismiss and click/key dismiss)
+     - Call Sheet bottom drawer for Elmhurst & Hicksville
+     - Service tabs filtering (All · Pediatrics · Family Medicine)
+     - IV therapy carousel and accordions
+     - FAQ accordions
+     - Mobile navigation drawer
+   - Full Schema.org structured data (`MedicalClinic`, `FAQPage`, `MedicalWebPage`, `WebSite`, `Physician`)
+
+2. **`404.html`**
+   - Exact custom 404 error page from the live site
+
+3. **`images/` (67 assets)**
+   - All high-resolution doctor photos (`dr-qikai.jpg`, `dr-liyan.jpg`, transparent cutouts)
+   - Clinic interior & exterior photography (Elmhurst & Hicksville locations)
+   - SVG & PNG icons, badges, and background graphics
+   - Web manifest icons (`icon-192.png`, `icon-512.png`, `favicon.svg`, `favicon-32.png`, `favicon.ico`)
+
+4. **SEO & Discovery Assets**
+   - `robots.txt`
+   - `sitemap.xml`
+   - `site.webmanifest`
+   - `llms.txt` (AI agent discovery summary)
+   - `agents.json` (Structured clinic schema for AI assistants)
+
+5. **Local Dev Server (`server.js`)**
+   - Zero-dependency Node.js HTTP server
+   - Correct MIME types for all images, SVGs, webmanifest, and HTML
+   - Clean 404 fallback handling
+
+---
+
+## Practice Information Reference
+
+- **Practice**: Family First Medical (Family Medicine & Pediatrics)
+- **Physicians**:
+  - Dr. Qikai Yao, MD (Pediatrics & Adolescent Care)
+  - Dr. Liyan Yao, MD (Family Medicine & Adult Care)
+- **Offices**:
+  - **Elmhurst, Queens**: 45-02 82nd Street, Elmhurst, NY 11373 · Phone: (718) 779-2248 · Open 7 Days
+  - **Hicksville, Long Island**: 101 Jerusalem Avenue, Hicksville, NY 11801 · Phone: (516) 681-0681 · Mon/Tue/Fri 9-6, Sat/Sun 9-4
