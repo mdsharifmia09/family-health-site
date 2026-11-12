@@ -1,1 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#E11428"/><path d="M27 13h10v14h14v10H37v14H27V37H13V27h14z" fill="#fff"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="1.20 -5.80 457.60 457.60" width="458" height="458">
+<title>Family Health — Michael &amp; Saini Care PC</title>
+<defs>
+<linearGradient id="gBlue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4FB3E8"/><stop offset="1" stop-color="#2A7FCB"/></linearGradient>
+<linearGradient id="gRed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EC3A4C"/><stop offset="1" stop-color="#C42862"/></linearGradient>
+<linearGradient id="gGreen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9CCB3B"/><stop offset="1" stop-color="#4F9A2C"/></linearGradient>
+<linearGradient id="gPurple" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A050C0"/><stop offset="1" stop-color="#5A2D8F"/></linearGradient>
+</defs>
+
+<g transform="translate(0.00 0.00) scale(1.00000) translate(-70 0)">
+<path d="M300 58 C270 38 278 14 300 26 C322 14 330 38 300 58 Z" fill="#E2509E"/>
+<path d="M170 70 C95 110 80 235 222 316 C140 250 122 150 170 70 Z" fill="url(#gBlue)"/>
+<path d="M430 70 C505 110 520 235 378 316 C460 250 478 150 430 70 Z" fill="url(#gRed)"/>
+<path d="M92 228 C110 330 200 390 296 418 C230 375 150 330 92 228 Z" fill="url(#gGreen)"/>
+<path d="M508 228 C490 330 400 390 304 418 C370 375 450 330 508 228 Z" fill="url(#gPurple)"/>
+<path d="M300 185 C282 128 222 118 192 148 C150 190 170 275 300 360 C215 300 188 235 212 195 C232 162 282 165 300 200 Z" fill="#3E9FDB"/>
+<path d="M300 185 C318 128 378 118 408 148 C450 190 430 275 300 360 C385 300 412 235 388 195 C368 162 318 165 300 200 Z" fill="#D9449A"/>
+<circle cx="232" cy="94" r="30" fill="#3E9FDB"/>
+<circle cx="368" cy="94" r="30" fill="#D9449A"/>
+<path d="M258 224 C247 216 242 226 247 233 C251 238 257 234 258 224 Z" fill="#7CB342"/>
+<circle cx="276" cy="232" r="19" fill="#7CB342"/>
+<rect x="258" y="256" width="36" height="44" rx="12" fill="#7CB342"/>
+<rect x="263" y="292" width="11" height="26" rx="5" fill="#7CB342"/>
+<rect x="278" y="292" width="11" height="26" rx="5" fill="#7CB342"/>
+<circle cx="328" cy="248" r="17" fill="#F39A2B"/>
+<rect x="312" y="270" width="32" height="38" rx="11" fill="#F39A2B"/>
+<rect x="316" y="300" width="10" height="18" rx="5" fill="#F39A2B"/>
+<rect x="330" y="300" width="10" height="18" rx="5" fill="#F39A2B"/>
+</g>
+</svg>
