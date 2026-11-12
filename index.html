@@ -31,7 +31,7 @@
 <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<link rel="preload" as="image" href="images/hero-desk-level.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero-bg.jpg" fetchpriority="high">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -663,13 +663,11 @@ html[lang="zh"] .hero h1 .gt{-webkit-text-fill-color:var(--red);color:var(--red)
 /* ---- mockup treatment v2: shared (desktop + mobile) ---- */
 .hero{background:linear-gradient(180deg,var(--cream),#fff)}
 .hero-bg{grid-template-columns:1fr;filter:saturate(.98);transform:none;
-  background:url("images/hero-desk-level.jpg") no-repeat center 50%/cover}
+  background:url("images/hero-bg.jpg") no-repeat 62% 0/cover}
 .hero-bg img{display:none}
-@media (min-width:1361px){.hero-bg{background-position:center 45%}}
-@media (min-width:1681px){.hero-bg{background-position:center 40%}}
 
-.hero-bg::after{background:linear-gradient(90deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.80) 40%,rgba(255,255,255,.28) 78%,rgba(255,255,255,.16) 100%),
-  linear-gradient(180deg,rgba(255,255,255,0) 74%,#fff 100%)}
+.hero-bg::after{background:linear-gradient(90deg,rgba(245,249,253,.97) 0%,rgba(240,247,253,.93) 40%,rgba(234,244,251,.5) 55%,rgba(31,78,156,.05) 72%,rgba(31,78,156,.12) 100%),
+  linear-gradient(180deg,rgba(255,255,255,0) 72%,#fff 100%)}
 /* cutout doctor figures with overlapping white cards */
 .hero-card{background:transparent;border:none;box-shadow:none;padding:0}
 .hero-portraits{align-items:start}
@@ -773,7 +771,7 @@ html.badges-go .hero-portraits figure:nth-child(2){transition-delay:.75s}
      FAMILY FIRST MEDICAL wall sign sits readable in the gap above the doctors,
      instead of ceiling up top with the sign buried behind their heads. */
   .hero-bg{inset:auto;top:0;left:0;right:0;height:267vw;
-    background:url("images/hero-desk-level.jpg") no-repeat 83% -3vw/150% auto}
+    background:url("images/hero-bg-mobile.jpg") no-repeat 72% 100%/cover}
   /* Lighter wash over the sign band so it stays legible; white still ramps in
      below the portraits for the lead/tiles/CTAs. */
   .hero-bg::after{background:
@@ -890,11 +888,7 @@ img[src*="family-heart"],img[src*="badge-globe"],img[src*="badge-shield"],img[sr
 
 <main id="main">
 <section class="hero">
-  <div class="hero-bg" aria-hidden="true">
-    <img decoding="async" src="images/reception-name-wall.jpg" alt="">
-    <img decoding="async" src="images/elm-front.jpg" alt="">
-    <img decoding="async" src="images/li-reception-grand.jpg" alt="">
-  </div>
+  <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div>
       <div class="hero-eyebrows">
