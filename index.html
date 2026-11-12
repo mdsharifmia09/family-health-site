@@ -31,7 +31,8 @@
 <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<link rel="preload" as="image" href="images/hero-bg.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero-bg.jpg" media="(min-width:761px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero-bg-mobile.jpg" media="(max-width:760px)" fetchpriority="high">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -885,6 +886,57 @@ nav.main a.active{color:var(--blue-deep);background:var(--bg-tint)}
 #lb .lb-next{right:20px;top:50%;margin-top:-24px}
 @media (max-width:600px){#lb .lb-prev{left:8px;top:auto;bottom:18px;margin:0}#lb .lb-next{right:8px;top:auto;bottom:18px;margin:0}}
 @media (prefers-reduced-motion:reduce){#scrollbar{display:none}.util .pill.status::before{animation:none}#lb img,#lb.open{animation:none}}
+
+/* ===== Mobile optimization ===== */
+html{-webkit-tap-highlight-color:rgba(38,128,127,.18)}
+button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
+@media (max-width:760px){
+  .mobile-cta{padding-bottom:calc(10px + env(safe-area-inset-bottom))}
+  .gal-grid figure{cursor:pointer}
+}
+@media (max-width:600px){
+  /* hero strip: compact, readable tiles */
+  .trust{padding:22px 0}
+  .trust .wrap{grid-template-columns:1fr 1fr;gap:10px}
+  .trust .t{padding:11px 12px;gap:10px;border-radius:14px;align-items:flex-start}
+  .trust .t .ic{width:34px;height:34px;flex:0 0 34px;border-radius:10px}
+  .trust .t .ic img{width:19px;height:19px}
+  .trust .t b{font-size:13.5px;line-height:1.25}
+  .trust .t span{font-size:11.5px;line-height:1.35}
+  /* promise strip: keep the signature on two tidy lines */
+  .interlude-inner{padding:72px 20px}
+  .int-sign{font-size:12px;letter-spacing:.06em;line-height:1.5}
+  .int-sign .sn-a,.int-sign .sn-b{display:block}
+  .int-quote{font-size:clamp(23px,6.6vw,28px)}
+  /* visit cards: one per row */
+  .visit-cards{grid-template-columns:1fr}
+  .vcard{padding:18px}
+  /* footer: brand across the top, link groups below */
+  .foot-grid{grid-template-columns:1fr 1fr;gap:26px 18px}
+  .foot-brand{grid-column:1/-1}
+  .foot-brand p{max-width:none}
+  .foot-col a,.foot-col p{overflow-wrap:anywhere}
+  /* section rhythm */
+  .sec-head h2{font-size:clamp(26px,7.4vw,32px);line-height:1.12}
+  .loc-actions .btn{flex:1 1 100%;justify-content:center;text-align:center}
+  .hours-card{padding:22px}
+  .svc{padding:16px}
+  .filters{gap:8px}
+  .filter{padding:10px 16px}
+  .qa button{padding:16px 18px;min-height:52px}
+  #lb img{max-height:68vh}
+}
+@media (max-width:380px){
+  .trust .wrap{grid-template-columns:1fr}
+  .hero-portraits figcaption b{font-size:12px}
+}
+
+@media (max-width:600px){
+  .foot-grid > :nth-child(1){grid-column:1/-1;grid-row:1}
+  .foot-grid > :nth-child(2){grid-column:1;grid-row:2}
+  .foot-grid > :nth-child(3){grid-column:2;grid-row:2}
+  .foot-grid > :nth-child(4){grid-column:1/-1;grid-row:3}
+}
 </style>
 </head>
 <body>
@@ -1104,7 +1156,7 @@ nav.main a.active{color:var(--blue-deep);background:var(--bg-tint)}
       <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/age-infant.jpg" alt="Provider examining an infant"><div class="age" style="color:var(--coral-deep)">0–12<small>MONTHS</small></div><div class="desc"><div class="stripe" style="background:var(--coral)"></div><div class="txt"><h4>Newborns &amp; Babies</h4><p>Gentle first checkups, feeding guidance and the earliest vaccines.</p></div></div></div>
       <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/age-child.jpg" alt="Provider with a young child"><div class="age" style="color:var(--peach-deep)">1–12<small>YEARS</small></div><div class="desc"><div class="stripe" style="background:var(--peach)"></div><div class="txt"><h4>Kids</h4><p>Growth checks, vaccines, school exams and help with everyday illnesses.</p></div></div></div>
       <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/age-teen.jpg" alt="Provider with a teen and parent"><div class="age" style="color:var(--mint-deep)">13–21<small>YEARS</small></div><div class="desc"><div class="stripe" style="background:var(--mint)"></div><div class="txt"><h4>Teens &amp; Young Adults</h4><p>Sports clearance, teen appointments and advice for changing bodies.</p></div></div></div>
-      <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/age-adult.jpg" alt="Provider with an adult patient"><div class="age" style="color:var(--blue-deep)"><span>Adults</span></div><div class="desc"><div class="stripe" style="background:var(--blue)"></div><div class="txt"><h4>Adults</h4><p>Yearly physicals, screenings, women's health and care for ongoing conditions.</p></div></div></div>
+      <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/age-adult.jpg" alt="Provider with an adult patient"><div class="age" style="color:var(--blue-deep)"><span>Adults</span></div><div class="desc"><div class="stripe" style="background:var(--blue)"></div><div class="txt"><h4>Everyday Adult Care</h4><p>Yearly physicals, screenings, women's health and care for ongoing conditions.</p></div></div></div>
       <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/age-senior.jpg" alt="Provider with a senior patient"><div class="age" style="color:var(--violet-deep)"><span>Seniors</span><small>MEDICARE ACCEPTED</small></div><div class="desc"><div class="stripe" style="background:var(--violet)"></div><div class="txt"><h4>Older Adults</h4><p>Preventive visits, medication reviews and support for long-term conditions.</p></div></div></div>
     </div>
   </div>
