@@ -1370,6 +1370,16 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
     el.href=LINKS[k]; el.target='_blank'; el.rel='noopener'; el.hidden=false;
   });
   window.openCallSheet=function(){document.getElementById('callsheet').classList.add('open');};
+  /* desktop browsers have no phone app: show the number instead of a dead tel: link */
+  var desktop=window.matchMedia&&window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if(desktop){
+    document.querySelectorAll('a[data-link="booking"][href^="tel:"], a.btn[href^="tel:"]').forEach(function(a){
+      a.addEventListener('click',function(e){
+        if(a.hasAttribute('data-keep-tel')) return;
+        e.preventDefault(); if(window.closeNav) closeNav(); openCallSheet();
+      });
+    });
+  }
   window.closeCallSheet=function(){document.getElementById('callsheet').classList.remove('open');};
   window.filterSvc=function(cat,btn){
     document.querySelectorAll('.filter').forEach(function(f){f.classList.remove('active');});
@@ -1419,7 +1429,9 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
 <div class="callsheet" id="callsheet" onclick="if(event.target===this)closeCallSheet()">
   <div class="callsheet-panel">
     <div class="callsheet-title">Call us to book</div>
-    <a href="tel:+16466231099" class="btn btn-primary" onclick="closeCallSheet()"><span>Call · 646-623-1099</span></a>
+    <div style="font:800 28px/1.2 Montserrat,Inter,sans-serif;text-align:center;margin:4px 0 2px;color:#1a2332;user-select:all">646-623-1099</div>
+    <div style="text-align:center;font-size:13.5px;color:#4A5868;margin-bottom:8px">Open every day, 9:30 AM to 6 PM</div>
+    <a href="tel:+16466231099" data-keep-tel class="btn btn-primary" onclick="closeCallSheet()"><span>Call now</span></a>
     <button type="button" class="callsheet-cancel" onclick="closeCallSheet()">Cancel</button>
   </div>
 </div>
