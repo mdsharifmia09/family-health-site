@@ -651,7 +651,7 @@ html.badges-go .hl div:nth-child(4){transition-delay:.92s}
 
 /* --- hero H1 accent: italic solid red + hand-drawn curved underline --- */
 .hero h1 .gt{font-style:italic;color:var(--red);-webkit-text-fill-color:var(--red);background:none}
-.hero h1 .u-one::after{content:"";position:absolute;left:-1%;right:11%;bottom:-.01em;height:.30em;background:no-repeat center bottom/100% 100% url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20120%2015%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M3%206.6%20C%2040%203.4%2082%204.2%20117%207.4%20C%20100%208.2%2060%208.4%203%2012.4%20Z%27%20fill%3D%27%23e30620%27%2F%3E%3C%2Fsvg%3E");pointer-events:none}
+.hero h1 .u-one::after{content:"";position:absolute;left:-1%;right:11%;bottom:-.01em;height:.30em;background:no-repeat center bottom/100% 100% url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20120%2015%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M3%206.6%20C%2040%203.4%2082%204.2%20117%207.4%20C%20100%208.2%2060%208.4%203%2012.4%20Z%27%20fill%3D%27%231F4E9C%27%2F%3E%3C%2Fsvg%3E");pointer-events:none}
 .hero h1 .u-one{position:relative;display:inline-block;text-decoration:none;padding-bottom:.18em}
 html[lang="zh"] .hero h1 .gt{-webkit-text-fill-color:var(--red);color:var(--red)}
 
@@ -826,6 +826,13 @@ html.badges-go .hero-portraits figure:nth-child(2){transition-delay:.75s}
   .hero-cta .btn-primary{order:1;background:linear-gradient(135deg,#1F4E9C,#3E9FDB);box-shadow:0 20px 40px rgba(31,78,156,.28)}
   .hero-cta .btn-ghost{order:2;min-height:60px;font-size:18px;color:var(--navy);background:#fff;border:1px solid var(--border);box-shadow:0 14px 32px rgba(20,48,95,.08)}
 }
+
+/* recolor red icon artwork to the logo blue */
+img[src*="family-heart"],img[src*="badge-globe"],img[src*="badge-shield"],img[src*="-v2"],img[src*="icon-patients"],img[src*="badge-care"],.eyebrow-ic{filter:hue-rotate(212deg) saturate(1.05)}
+.trust .t .ic img[src*="family-heart"],.trust .t .ic img[src*="badge-globe"]{filter:hue-rotate(212deg) brightness(1.4)}
+
+.hero-portraits{grid-template-columns:repeat(2,minmax(0,1fr))}
+.hero-portraits figcaption b{font-size:clamp(16px,1.3vw,20px);white-space:normal;overflow-wrap:anywhere}
 </style>
 </head>
 <body>
@@ -894,7 +901,7 @@ html.badges-go .hero-portraits figure:nth-child(2){transition-delay:.75s}
         <span class="eyebrow"><img class="eyebrow-ic" src="images/badge-care.png" alt=""><span>Warm, family-friendly primary care</span></span>
         <span class="badge-new"><img class="pd-img" src="images/badge-accepting.png" alt=""><span>Accepting new patients</span></span>
       </div>
-      <h1>Family primary care<br>for <span class="gt"><span class='u-one'>every age</span>.</span></h1>
+      <h1>Primary care<br>for <span class="gt"><span class='u-one'>every age</span>.</span></h1>
       <p class="lead">From your newborn's first checkup to your own annual physical, our nurse practitioner–owned practice cares for your whole family — in New Hyde Park, seven days a week.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" data-link="booking" href="tel:+16466231099"><svg aria-hidden="true" class="lead-ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span data-booking-label>Call to Make an Appointment</span><svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg></a>
@@ -904,11 +911,11 @@ html.badges-go .hero-portraits figure:nth-child(2){transition-delay:.75s}
     <div class="hero-card">
       <div class="hero-portraits">
         <figure><a class="portrait-link" href="#provider-1">
-          <img decoding="async" fetchpriority="high" width="600" height="750" src="images/provider-samuel-michael.jpg" alt="Samuel Michael, MS, RN, FNP-BC — Family Nurse Practitioner at Family Health" style="border-radius:18px 18px 0 0;object-fit:cover;aspect-ratio:4/5;object-position:center top">
+          <img decoding="async" fetchpriority="high" width="900" height="900" src="images/provider-samuel-michael-cut.png" alt="Samuel Michael, MS, RN, FNP-BC — Family Nurse Practitioner at Family Health" style="aspect-ratio:1.1/1;object-fit:cover;object-position:center 4%">
           <figcaption><b>Samuel Michael, FNP-BC</b><span>Family Nurse Practitioner</span></figcaption>
         </a></figure>
         <figure><a class="portrait-link" href="#provider-2">
-          <img decoding="async" fetchpriority="high" width="600" height="750" src="images/provider-manjit-saini.jpg" alt="Manjit Singh Saini, FNP-C — Family Nurse Practitioner at Family Health" style="border-radius:18px 18px 0 0;object-fit:cover;aspect-ratio:4/5;object-position:center top">
+          <img decoding="async" fetchpriority="high" width="900" height="900" src="images/provider-manjit-saini-cut.png" alt="Manjit Singh Saini, FNP-C — Family Nurse Practitioner at Family Health" style="aspect-ratio:1.1/1;object-fit:cover;object-position:center 4%">
           <figcaption><b>Manjit Singh Saini, FNP-C</b><span>Family Nurse Practitioner</span></figcaption>
         </a></figure>
       </div>
@@ -966,7 +973,7 @@ html.badges-go .hero-portraits figure:nth-child(2){transition-delay:.75s}
       <article class="dcard reveal" id="provider-1">
         <div class="dcard-side g1">
           <img decoding="async" loading="lazy" class="ph" src="images/provider-samuel-michael.jpg" alt="Samuel Michael, MS, RN, FNP-BC" style="object-position:center top">
-          <div class="stat"><span class="med">Family Nurse Practitioner</span><span class="lab">All ages · Family primary care</span></div>
+          <div class="stat"><span class="med">Family Primary Care</span><span class="lab">All ages · Family primary care</span></div>
           <span class="new-pill"><span class="pd"></span><span>Accepting new patients</span></span>
           <div class="nm"><b>Samuel Michael</b><span>Board-Certified Family Nurse Practitioner</span></div>
         </div>
@@ -981,7 +988,7 @@ html.badges-go .hero-portraits figure:nth-child(2){transition-delay:.75s}
       <article class="dcard reveal" id="provider-2">
         <div class="dcard-side g2">
           <img decoding="async" loading="lazy" class="ph" src="images/provider-manjit-saini.jpg" alt="Manjit Singh Saini, FNP-C" style="object-position:center top">
-          <div class="stat"><span class="med">Family Nurse Practitioner</span><span class="lab">All ages · Family primary care</span></div>
+          <div class="stat"><span class="med">Family Primary Care</span><span class="lab">All ages · Family primary care</span></div>
           <span class="new-pill"><span class="pd"></span><span>Accepting new patients</span></span>
           <div class="nm"><b>Manjit Singh Saini</b><span>Board-Certified Family Nurse Practitioner</span></div>
         </div>
