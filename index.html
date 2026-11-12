@@ -221,7 +221,7 @@ section{padding:76px 0}
 }
 .ages-band{display:flex;flex-direction:column;gap:14px;max-width:960px;margin-left:auto;margin-right:auto}
 #ages{position:relative;isolation:isolate}
-#ages::before{content:"";position:absolute;inset:0;z-index:-1;background:url(images/ages-bg.jpg) center/cover;opacity:.08;pointer-events:none}
+#ages::before{content:"";position:absolute;inset:0;z-index:-1;background:url(images/hero-bg-mobile.jpg) center/cover;opacity:.07;pointer-events:none}
 .band{display:flex;gap:18px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px 18px;transition:.2s}
 .band:hover{box-shadow:var(--shadow);transform:translateX(4px)}
 .band .bphoto{width:70px;height:70px;border-radius:14px;object-fit:cover;flex:0 0 70px}
@@ -592,16 +592,10 @@ html.badges-go .hl div:nth-child(4){transition-delay:.92s}
   .int-sign .sn-a,.int-sign .sn-b{display:block}
   .int-sign .sn-b::before{content:""}
 }
-/* ===== Premium pass: wellness photo backdrop (desktop) ===== */
-@media (min-width:1000px){
-  .wellness::before{content:"";position:absolute;top:0;right:0;bottom:0;width:58%;z-index:-1;
-    background:url('images/drip-md-suite.jpg') right center/cover no-repeat;opacity:.09;filter:saturate(.7);
-    -webkit-mask-image:linear-gradient(90deg,transparent,#000 55%);mask-image:linear-gradient(90deg,transparent,#000 55%)}
-}
 /* ===== Premium pass: visit section depth ===== */
 .visit{position:relative;isolation:isolate;overflow:hidden}
 .visit::before{content:"";position:absolute;inset:0;z-index:-2;
-  background:url('images/reception-name-wall.jpg') center 58%/cover no-repeat;filter:saturate(.35) brightness(.78)}
+  background:url('images/hero-bg-mobile.jpg') center 58%/cover no-repeat;filter:saturate(.35) brightness(.78)}
 .visit::after{content:"";position:absolute;inset:0;z-index:-1;
   background:linear-gradient(180deg,rgba(11,18,32,.95),rgba(15,27,45,.88) 55%,rgba(12,20,34,.95))}
 
@@ -612,7 +606,7 @@ html.badges-go .hl div:nth-child(4){transition-delay:.92s}
 
 
 /* trust strip: faded welcome collage + icon assets */
-.trust::before{content:"";position:absolute;inset:-4%;z-index:-2;background:url('images/welcome-collage.jpg') center 35%/cover no-repeat;filter:saturate(.78) brightness(.92) contrast(1.04);animation:welcomeDrift 26s ease-in-out infinite alternate;will-change:transform}
+.trust::before{content:"";position:absolute;inset:-4%;z-index:-2;background:url('images/trust-bg.jpg') center 35%/cover no-repeat;filter:saturate(.78) brightness(.92) contrast(1.04);animation:welcomeDrift 26s ease-in-out infinite alternate;will-change:transform}
 .trust::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(52% 140% at 85% 50%,rgba(31,78,156,.22),transparent 62%),linear-gradient(100deg,rgba(11,18,32,.7) 0%,rgba(11,18,32,.48) 32%,rgba(11,18,32,.4) 62%,rgba(11,18,32,.64) 100%)}
 .trust .t .ic img{width:24px;height:24px;object-fit:contain;filter:brightness(1.3) saturate(1.05)}
 
@@ -832,6 +826,11 @@ img[src*="family-heart"],img[src*="badge-globe"],img[src*="badge-shield"],img[sr
 
 .hero-portraits{grid-template-columns:repeat(2,minmax(0,1fr))}
 .hero-portraits figcaption b{font-size:clamp(16px,1.3vw,20px);white-space:normal;overflow-wrap:anywhere}
+
+/* photo framing for the new collage images */
+.welcome-collage .wc.a img{transform:none;object-position:90% 40%}
+.welcome-collage .wc.c img{object-position:22% 40%}
+.welcome-collage .wc.d img{object-position:96% 30%}
 </style>
 </head>
 <body>
@@ -936,12 +935,12 @@ img[src*="family-heart"],img[src*="badge-globe"],img[src*="badge-shield"],img[sr
 <section class="welcome">
   <div class="wrap welcome-grid">
     <div class="welcome-media welcome-collage reveal" aria-label="Photos of our care team with patients of every age">
-      <figure class="wc a"><img decoding="async" loading="lazy" width="640" height="626" src="images/welcome-girl-teddy.jpg" alt="Provider examining a young girl holding a teddy bear while her mother watches"></figure>
-      <figure class="wc b"><img decoding="async" loading="lazy" width="640" height="628" src="images/welcome-toddler-mom.jpg" alt="Provider gently checking a toddler held by his mother"></figure>
-      <figure class="wc c"><img decoding="async" loading="lazy" width="640" height="638" src="images/welcome-senior-walk.jpg" alt="Provider walking with a senior patient in the clinic hallway"></figure>
-      <figure class="wc d"><img decoding="async" loading="lazy" width="640" height="636" src="images/welcome-boy-stethoscope.jpg" alt="Provider listening to a smiling young boy's heart with a stethoscope"></figure>
-      <figure class="wc e"><img decoding="async" loading="lazy" width="1448" height="1086" src="images/li-exterior.jpg" alt="Office building exterior"></figure>
-      <figure class="wc f"><img decoding="async" loading="lazy" width="640" height="654" src="images/welcome-senior-bp.jpg" alt="Provider checking a senior woman's blood pressure during a check-up"></figure>
+      <figure class="wc a"><img decoding="async" loading="lazy" width="640" height="626" src="images/care-girl.jpg" alt="Provider examining a young girl holding a teddy bear while her mother watches"></figure>
+      <figure class="wc b"><img decoding="async" loading="lazy" width="640" height="628" src="images/care-baby.jpg" alt="Provider gently checking a toddler held by his mother"></figure>
+      <figure class="wc c"><img decoding="async" loading="lazy" width="640" height="638" src="images/care-senior-nurse.jpg" alt="Provider walking with a senior patient in the clinic hallway"></figure>
+      <figure class="wc d"><img decoding="async" loading="lazy" width="640" height="636" src="images/care-teen.jpg" alt="Provider listening to a smiling young boy's heart with a stethoscope"></figure>
+      <figure class="wc e"><img decoding="async" loading="lazy" width="1448" height="1086" src="images/building.jpg" alt="Family Health office building"></figure>
+      <figure class="wc f"><img decoding="async" loading="lazy" width="640" height="654" src="images/care-bp-woman.jpg" alt="Provider checking a senior woman's blood pressure during a check-up"></figure>
     </div>
     <div class="reveal">
       <div class="kicker">Welcome</div>
@@ -1047,11 +1046,11 @@ img[src*="family-heart"],img[src*="badge-globe"],img[src*="badge-shield"],img[sr
       <p data-en="Family primary care from birth through older adulthood." data-zh="一个与您家庭共同成长的诊所——从生命之初，直到金色晚年。">Family primary care from birth through older adulthood.</p>
     </div>
     <div class="ages-band">
-      <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/care-2.jpg" alt="Provider examining an infant"><div class="age" style="color:var(--coral-deep)">0–12<small data-en="MONTHS" data-zh="个月">MONTHS</small></div><div class="desc"><div class="stripe" style="background:var(--coral)"></div><div class="txt"><h4 data-en="Infants &amp; Newborns" data-zh="婴儿与新生儿">Infants &amp; Newborns</h4><p data-en="Newborn checkups, feeding support, growth monitoring and early immunizations." data-zh="新生儿检查、喂养指导、生长追踪以及宝宝的首次疫苗接种。">Newborn checkups, feeding support, growth monitoring and early immunizations.</p></div></div></div>
-      <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/care-3.jpg" alt="Provider with a young child"><div class="age" style="color:var(--peach-deep)">1–12<small data-en="YEARS" data-zh="岁">YEARS</small></div><div class="desc"><div class="stripe" style="background:var(--peach)"></div><div class="txt"><h4 data-en="Children" data-zh="儿童">Children</h4><p data-en="Well-child visits, vaccines, school physicals and care for common illnesses." data-zh="儿童保健、疫苗接种、入学体检及成长过程中的疾病照护。">Well-child visits, vaccines, school physicals and care for common illnesses.</p></div></div></div>
-      <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/care-1.jpg" alt="Provider with a teen and parent"><div class="age" style="color:var(--mint-deep)">13–21<small data-en="YEARS" data-zh="岁">YEARS</small></div><div class="desc"><div class="stripe" style="background:var(--mint)"></div><div class="txt"><h4>Adolescents &amp; Young Adults</h4><p data-en="Sports physicals, teen visits and guidance on adolescent health." data-zh="运动体检、青少年私密问诊，陪伴度过成长的重要阶段。">Sports physicals, teen visits and guidance on adolescent health.</p></div></div></div>
-      <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/care-6.jpg" alt="Provider with an adult patient"><div class="age" style="color:var(--blue-deep)"><span data-en="Adults" data-zh="成人">Adults</span></div><div class="desc"><div class="stripe" style="background:var(--blue)"></div><div class="txt"><h4 data-en="Adults &amp; Women's Health" data-zh="成人与妇科健康">Adults &amp; Women's Health</h4><p data-en="Annual physicals, preventive screenings, women's wellness and chronic condition care." data-zh="年度体检、慢性病管理、预防性筛查及女性健康照护。">Annual physicals, preventive screenings, women's wellness and chronic condition care.</p></div></div></div>
-      <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/care-4.jpg" alt="Provider with a senior patient"><div class="age" style="color:var(--violet-deep)"><span data-en="Seniors" data-zh="长者">Seniors</span><small data-en="MEDICARE WELCOME" data-zh="接受 MEDICARE">MEDICARE WELCOME</small></div><div class="desc"><div class="stripe" style="background:var(--violet)"></div><div class="txt"><h4>Older Adults</h4><p data-en="Preventive visits, medication review and ongoing care for chronic conditions." data-zh="全面照护并接受 Medicare——在人生的每个晚年阶段守护您的健康。">Preventive visits, medication review and ongoing care for chronic conditions.</p></div></div></div>
+      <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/age-infant.jpg" alt="Provider examining an infant"><div class="age" style="color:var(--coral-deep)">0–12<small data-en="MONTHS" data-zh="个月">MONTHS</small></div><div class="desc"><div class="stripe" style="background:var(--coral)"></div><div class="txt"><h4 data-en="Infants &amp; Newborns" data-zh="婴儿与新生儿">Infants &amp; Newborns</h4><p data-en="Newborn checkups, feeding support, growth monitoring and early immunizations." data-zh="新生儿检查、喂养指导、生长追踪以及宝宝的首次疫苗接种。">Newborn checkups, feeding support, growth monitoring and early immunizations.</p></div></div></div>
+      <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/age-child.jpg" alt="Provider with a young child"><div class="age" style="color:var(--peach-deep)">1–12<small data-en="YEARS" data-zh="岁">YEARS</small></div><div class="desc"><div class="stripe" style="background:var(--peach)"></div><div class="txt"><h4 data-en="Children" data-zh="儿童">Children</h4><p data-en="Well-child visits, vaccines, school physicals and care for common illnesses." data-zh="儿童保健、疫苗接种、入学体检及成长过程中的疾病照护。">Well-child visits, vaccines, school physicals and care for common illnesses.</p></div></div></div>
+      <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/age-teen.jpg" alt="Provider with a teen and parent"><div class="age" style="color:var(--mint-deep)">13–21<small data-en="YEARS" data-zh="岁">YEARS</small></div><div class="desc"><div class="stripe" style="background:var(--mint)"></div><div class="txt"><h4>Adolescents &amp; Young Adults</h4><p data-en="Sports physicals, teen visits and guidance on adolescent health." data-zh="运动体检、青少年私密问诊，陪伴度过成长的重要阶段。">Sports physicals, teen visits and guidance on adolescent health.</p></div></div></div>
+      <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/age-adult.jpg" alt="Provider with an adult patient"><div class="age" style="color:var(--blue-deep)"><span data-en="Adults" data-zh="成人">Adults</span></div><div class="desc"><div class="stripe" style="background:var(--blue)"></div><div class="txt"><h4 data-en="Adults &amp; Women's Health" data-zh="成人与妇科健康">Adults &amp; Women's Health</h4><p data-en="Annual physicals, preventive screenings, women's wellness and chronic condition care." data-zh="年度体检、慢性病管理、预防性筛查及女性健康照护。">Annual physicals, preventive screenings, women's wellness and chronic condition care.</p></div></div></div>
+      <div class="band reveal"><img decoding="async" loading="lazy" class="bphoto" src="images/age-senior.jpg" alt="Provider with a senior patient"><div class="age" style="color:var(--violet-deep)"><span data-en="Seniors" data-zh="长者">Seniors</span><small data-en="MEDICARE WELCOME" data-zh="接受 MEDICARE">MEDICARE WELCOME</small></div><div class="desc"><div class="stripe" style="background:var(--violet)"></div><div class="txt"><h4>Older Adults</h4><p data-en="Preventive visits, medication review and ongoing care for chronic conditions." data-zh="全面照护并接受 Medicare——在人生的每个晚年阶段守护您的健康。">Preventive visits, medication review and ongoing care for chronic conditions.</p></div></div></div>
     </div>
   </div>
 </section>
@@ -1065,7 +1064,7 @@ img[src*="family-heart"],img[src*="badge-globe"],img[src*="badge-shield"],img[sr
     </div>
     <div class="loc-grid">
       <div class="loc reveal">
-        <div class="loc-photo"><img decoding="async" loading="lazy" src="images/elm-front.jpg" alt="Office exterior"><span class="loc-tag">New Hyde Park, NY</span></div>
+        <div class="loc-photo"><img decoding="async" loading="lazy" src="images/building.jpg" alt="Family Health office building"><span class="loc-tag">New Hyde Park, NY</span></div>
         <div class="loc-body">
           <h3>Family Health — Michael &amp; Saini Care</h3>
           <div class="addr">381 Old Courthouse Road, New Hyde Park, NY 11040</div>
@@ -1092,21 +1091,22 @@ img[src*="family-heart"],img[src*="badge-globe"],img[src*="badge-shield"],img[sr
     <div class="sec-head center reveal">
       <div class="kicker">Inside Our Office</div>
       <h2>See the office <span class="gt">before you visit</span></h2>
+      <p>Our reception, waiting area and exam room — and the attentive care you can expect at every visit.</p>
     </div>
     <div class="gal-group reveal">
       <div class="gal-grid">
-        <figure><img decoding="async" loading="lazy" src="images/elm-exterior.jpg" alt="Street entrance"><span class="gal-cap">Street entrance</span></figure>
-        <figure><img decoding="async" loading="lazy" src="images/elmhurst-reception.jpg" alt="Reception"><span class="gal-cap">Reception</span></figure>
-        <figure><img decoding="async" loading="lazy" src="images/elmhurst-waiting.jpg" alt="Waiting area"><span class="gal-cap">Waiting area</span></figure>
-        <figure><img decoding="async" loading="lazy" src="images/elmhurst-hallway.jpg" alt="Exam-room hallway"><span class="gal-cap">Exam-room hallway</span></figure>
-        <figure><img decoding="async" loading="lazy" src="images/elmhurst-peds-room.jpg" alt="Pediatric exam room"><span class="gal-cap">Pediatric exam room</span></figure>
-        <figure><img decoding="async" loading="lazy" src="images/elmhurst-exam-2.jpg" alt="Exam room"><span class="gal-cap">Exam room</span></figure>
-        <figure><img decoding="async" loading="lazy" src="images/li-exterior.jpg" alt="Building exterior"><span class="gal-cap">Building exterior</span></figure>
-        <figure><img decoding="async" loading="lazy" src="images/li-reception-grand.jpg" alt="Reception"><span class="gal-cap">Reception</span></figure>
-        <figure><img decoding="async" loading="lazy" src="images/li-wellness-suite.jpg" alt="Treatment suite"><span class="gal-cap">Treatment suite</span></figure>
-        <figure><img decoding="async" loading="lazy" src="images/li-waiting.jpg" alt="Waiting area"><span class="gal-cap">Waiting area</span></figure>
-        <figure><img decoding="async" loading="lazy" src="images/li-exam-room.jpg" alt="Exam room"><span class="gal-cap">Exam room</span></figure>
-        <figure><img decoding="async" loading="lazy" src="images/li-procedure.jpg" alt="Procedure room"><span class="gal-cap">Procedure room</span></figure>
+        <figure><img decoding="async" loading="lazy" src="images/gal-building.jpg" alt="Our building"><span class="gal-cap">Our building</span></figure>
+        <figure><img decoding="async" loading="lazy" src="images/gal-reception.jpg" alt="Reception"><span class="gal-cap">Reception</span></figure>
+        <figure><img decoding="async" loading="lazy" src="images/gal-1.jpg" alt="Patient consultation"><span class="gal-cap">Patient consultation</span></figure>
+        <figure><img decoding="async" loading="lazy" src="images/gal-waiting-1.jpg" alt="Waiting area"><span class="gal-cap">Waiting area</span></figure>
+        <figure><img decoding="async" loading="lazy" src="images/gal-4.jpg" alt="Pediatric visit"><span class="gal-cap">Pediatric visit</span></figure>
+        <figure><img decoding="async" loading="lazy" src="images/gal-waiting-2.jpg" alt="Waiting area & kids' corner"><span class="gal-cap">Waiting area & kids' corner</span></figure>
+        <figure><img decoding="async" loading="lazy" src="images/gal-exam-room.jpg" alt="Exam room"><span class="gal-cap">Exam room</span></figure>
+        <figure><img decoding="async" loading="lazy" src="images/gal-6.jpg" alt="Teen visit"><span class="gal-cap">Teen visit</span></figure>
+        <figure><img decoding="async" loading="lazy" src="images/gal-lobby.jpg" alt="Reception lobby"><span class="gal-cap">Reception lobby</span></figure>
+        <figure><img decoding="async" loading="lazy" src="images/gal-caring-1.jpg" alt="Caring for a senior patient"><span class="gal-cap">Caring for seniors</span></figure>
+        <figure><img decoding="async" loading="lazy" src="images/gal-2.jpg" alt="Blood pressure check"><span class="gal-cap">Blood pressure check</span></figure>
+        <figure><img decoding="async" loading="lazy" src="images/gal-caring-2.jpg" alt="Caring for an adult patient"><span class="gal-cap">Caring for adults</span></figure>
       </div>
     </div>
   </div>
