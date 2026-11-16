@@ -850,6 +850,19 @@ html{scroll-padding-top:96px}
   .dcard-side .nm b{font-size:19px}
 }
 
+/* ===== Mobile polish ===== */
+.sec-head h2,.tele h2,.hero h1{text-wrap:balance}
+.sec-head p,.tele p.tele-lead{text-wrap:pretty}
+@media (max-width:600px){
+  .hero h1 .gt{color:#15605e;-webkit-text-fill-color:#15605e;text-shadow:0 1px 14px rgba(255,255,255,.85)}
+  .hero h1{text-shadow:0 1px 14px rgba(255,255,255,.7)}
+  .hero p.lead{color:#2c3a4d;font-size:16px;line-height:1.55}
+  .sec-head{margin-bottom:34px}
+  section{padding:56px 0}
+  .tele{padding:40px 0}
+  .tele-card .btn{padding:15px 18px}
+  .btn,.filter{min-height:46px}
+}
 /* ===== Hero doctors pop in one by one ===== */
 @keyframes docPop{0%{opacity:0;transform:translateY(34px) scale(.82)}60%{opacity:1;transform:translateY(-8px) scale(1.04)}80%{transform:translateY(2px) scale(.99)}100%{opacity:1;transform:none}}
 .hero-portraits figure{animation:docPop .8s cubic-bezier(.2,.8,.25,1) backwards}
@@ -1049,7 +1062,7 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
         </a></figure>
       </div>
       <div class="hl">
-        <div><img class="hl-ic" src="images/badge-shield-v2.png" alt=""><span>Accepting new patients</span></div>
+        <div><img class="hl-ic" src="images/badge-shield-v2.png" alt=""><span>Personalized care for every age</span></div>
         <div><img class="hl-ic" src="images/icon-open-7-days-v2.png" alt=""><span>Open 7 days, 9:30 to 6</span></div>
         <div><img class="hl-ic" src="images/icon-insurance-v2.png" alt=""><span>Medicare &amp; NY Medicaid welcome</span></div>
         <div><img class="hl-ic" src="images/badge-globe-v2.png" alt=""><span>Same-day visits available</span></div>
