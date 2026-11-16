@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="light">
 <meta name="supported-color-schemes" content="light">
-<title>Family Health by Michael &amp; Saini — Nurse Practitioner Primary Care in New Hyde Park, NY</title>
-<meta name="description" content="A nurse practitioner–led neighborhood practice in New Hyde Park, NY. Checkups, sick visits and ongoing care from newborns to seniors, seven days a week. Medicare and NY Medicaid welcome. Call 646-623-1099.">
+<title>Family Primary Care in New Hyde Park, NY | Michael &amp; Saini Care</title>
+<meta name="description" content="Compassionate, personalized family primary care for children, adults and seniors in New Hyde Park, NY. Checkups, sick visits and ongoing care, open seven days a week. Medicare and NY Medicaid welcome. Call 646-623-1099.">
 <meta name="keywords" content="family primary care New Hyde Park, nurse practitioner New Hyde Park, well-child visits, annual physical, women's wellness, Medicare, NY Medicaid, same-day sick visit, walk-in, telehealth">
 <meta name="author" content="Michael &amp; Saini NP PC">
 <meta name="geo.region" content="US-NY">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Family Health — Michael &amp; Saini Care">
 <meta property="og:title" content="Family Health — Michael &amp; Saini Care">
-<meta property="og:description" content="Nurse practitioner–led primary care for your whole household in New Hyde Park, NY. Open every day.">
+<meta property="og:description" content="Your Family. Your Health. Our Commitment. Family primary care in New Hyde Park, NY, open every day.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="images/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <meta property="og:image:alt" content="Family Health — Michael &amp; Saini Care PC">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Family Health — Michael &amp; Saini Care">
-<meta name="twitter:description" content="Nurse practitioner–led primary care for your whole household in New Hyde Park, NY.">
+<meta name="twitter:description" content="Your Family. Your Health. Our Commitment. Family primary care in New Hyde Park, NY.">
 <meta name="twitter:image" content="images/og-image.png">
 <meta name="theme-color" content="#26807f">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -850,6 +850,12 @@ html{scroll-padding-top:96px}
   .dcard-side .nm b{font-size:19px}
 }
 
+/* ===== Hero doctors pop in one by one ===== */
+@keyframes docPop{0%{opacity:0;transform:translateY(34px) scale(.82)}60%{opacity:1;transform:translateY(-8px) scale(1.04)}80%{transform:translateY(2px) scale(.99)}100%{opacity:1;transform:none}}
+.hero-portraits figure{animation:docPop .8s cubic-bezier(.2,.8,.25,1) backwards}
+.hero-portraits figure:nth-child(1){animation-delay:.55s}
+.hero-portraits figure:nth-child(2){animation-delay:1.05s}
+@media (prefers-reduced-motion:reduce){.hero-portraits figure{animation:none!important}}
 /* ===== Interactive layer ===== */
 #scrollbar{position:fixed;top:0;left:0;right:0;height:3px;z-index:300;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#26807f,#4fb3b3 55%,#58b6a3);pointer-events:none}
 header{transition:box-shadow .25s,background .25s}
@@ -966,7 +972,7 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
     <nav class="main" aria-label="Primary">
       <a href="#services">Services</a>
       <a href="#ages">Every Generation</a>
-      <a href="#doctors">Your Providers</a>
+      <a href="#doctors">Care Team</a>
       <a href="#locations">Find Us</a>
       <a href="#insurance">Insurance</a>
       <a href="#faq">FAQ</a>
@@ -984,7 +990,7 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
     <button class="mnav-close" aria-label="Close" onclick="closeNav()">&times;</button>
     <a href="#services" onclick="closeNav()">Services</a>
     <a href="#ages" onclick="closeNav()">Every Generation</a>
-    <a href="#doctors" onclick="closeNav()">Your Providers</a>
+    <a href="#doctors" onclick="closeNav()">Care Team</a>
     <a href="#locations" onclick="closeNav()">Find Us</a>
     <a href="#insurance" onclick="closeNav()">Insurance</a>
     <a href="#faq" onclick="closeNav()">FAQ</a>
@@ -999,14 +1005,14 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
   <div class="wrap hero-grid">
     <div>
       <div class="hero-eyebrows">
-        <span class="eyebrow"><img class="eyebrow-ic" src="images/badge-care.png" alt=""><span>Nurse-led, neighborhood care</span></span>
-        <span class="badge-new"><img class="pd-img" src="images/badge-accepting.png" alt=""><span>New families welcome</span></span>
+        <span class="eyebrow"><img class="eyebrow-ic" src="images/badge-care.png" alt=""><span>Your Neighborhood Family Health Center</span></span>
+        <span class="badge-new"><img class="pd-img" src="images/badge-accepting.png" alt=""><span>Accepting New Patients</span></span>
       </div>
-      <h1>Care that knows<br>your <span class="gt"><span class='u-one'>whole family</span>.</span></h1>
-      <p class="lead">Whether it's a baby's first checkup, a teen's sports form, or your own blood-pressure review, you'll see the same nurse practitioners who take the time to listen. We're open every day in New Hyde Park.</p>
+      <h1>Your Family's Health.<br><span class="gt"><span class='u-one'>Our Priority.</span></span></h1>
+      <p class="lead">Compassionate, personalized primary care for children, adults, and seniors in New Hyde Park, NY. From routine checkups and preventive screenings to sick visits and chronic condition management, we're here for every stage of life.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" data-link="booking" href="tel:+16466231099"><svg aria-hidden="true" class="lead-ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span data-booking-label>Book a Visit by Phone</span><svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg></a>
-        <a href="#visit" class="btn btn-ghost"><svg aria-hidden="true" class="lead-ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Look Around the Office</span><svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a class="btn btn-primary" data-link="booking" href="tel:+16466231099"><svg aria-hidden="true" class="lead-ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span data-booking-label>Call to Schedule</span><svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#visit" class="btn btn-ghost"><svg aria-hidden="true" class="lead-ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Plan Your Visit</span><svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg></a>
       </div>
     </div>
     <div class="hero-card">
@@ -1021,10 +1027,10 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
         </a></figure>
       </div>
       <div class="hl">
-        <div><img class="hl-ic" src="images/badge-shield-v2.png" alt=""><span>Led by nurse practitioners</span></div>
-        <div><img class="hl-ic" src="images/icon-open-7-days-v2.png" alt=""><span>Open daily, 9:30 to 6</span></div>
+        <div><img class="hl-ic" src="images/badge-shield-v2.png" alt=""><span>Accepting new patients</span></div>
+        <div><img class="hl-ic" src="images/icon-open-7-days-v2.png" alt=""><span>Open 7 days, 9:30 to 6</span></div>
         <div><img class="hl-ic" src="images/icon-insurance-v2.png" alt=""><span>Medicare &amp; NY Medicaid welcome</span></div>
-        <div><img class="hl-ic" src="images/badge-globe-v2.png" alt=""><span>Walk-in, same-day &amp; video</span></div>
+        <div><img class="hl-ic" src="images/badge-globe-v2.png" alt=""><span>Same-day visits available</span></div>
       </div>
     </div>
   </div>
@@ -1051,8 +1057,8 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
     </div>
     <div class="reveal">
       <div class="kicker">About the Practice</div>
-      <h2>Healthcare with a <span class="gb">familiar face</span></h2>
-      <p style="color:var(--ink-mid);font-size:16px">Family Health was started by two nurse practitioners who wanted primary care to feel less rushed. Here you get unhurried appointments, plain-language answers, and a provider who remembers your story, whether you are five months old or eighty-five.</p>
+      <h2>Compassionate Care. <span class="gb">Familiar Faces.</span></h2>
+      <p style="color:var(--ink-mid);font-size:16px">Michael &amp; Saini Care offers personalized family healthcare with an emphasis on prevention, convenience, and continuity. Expect unhurried appointments, plain-language answers, and a provider who remembers your story, whether you are five months old or eighty-five.</p>
       <div class="values">
         <div class="value"><span class="ic"><img decoding="async" src="images/icon-personal-care.png" alt="Personalized care icon" width="50" height="50" loading="lazy"></span><h4>Unhurried Visits</h4><p>Time to ask questions and a provider who actually answers them.</p></div>
         <div class="value"><span class="ic"><img decoding="async" src="images/icon-family-heart.png" alt="Family care icon" width="50" height="50" loading="lazy"></span><h4>Whole Household</h4><p>Parents, kids and grandparents can all be seen by the same team.</p></div>
@@ -1066,9 +1072,9 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
 <section id="doctors">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <div class="kicker">Your Providers</div>
-      <h2>The nurse practitioners <span class="gt">behind the practice</span></h2>
-      <p>Two family nurse practitioners, one shared approach: listen first, then treat.</p>
+      <div class="kicker">Our Care Team</div>
+      <h2>Meet Your <span class="gt">Care Team</span></h2>
+      <p>Two dedicated family healthcare providers, one shared approach: listen first, then treat.</p>
     </div>
     <div class="dcards">
       <article class="dcard reveal" id="provider-1">
@@ -1124,8 +1130,8 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
   <div class="wrap">
     <div class="sec-head center reveal">
       <div class="kicker">What We Treat</div>
-      <h2>Checkups, sick days <span class="gt">and more</span></h2>
-      <p>A look at the visits and ongoing care our nurse practitioners handle.</p>
+      <h2>Healthcare Services for <span class="gt">Every Stage of Life</span></h2>
+      <p>Annual physicals, sick visits, children's healthcare, women's health, diabetes, hypertension, and preventive screenings.</p>
     </div>
     <div class="filters reveal">
       <button class="filter active" data-filter="all" onclick="filterSvc('all',this)">Show All</button>
@@ -1303,7 +1309,7 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
         <div class="brand">
           <img decoding="async" loading="lazy" class="brand-logo foot-logo" src="images/logo-ffm-dark.png" alt="Family Health — Michael &amp; Saini Care PC" width="200" height="55">
         </div>
-        <p>Primary care led by nurse practitioners, for every member of your household.</p>
+        <p>Complete Family Primary Care, Close to Home.</p>
       </div>
       <div class="foot-col">
         <h5>Visit</h5>
@@ -1334,7 +1340,7 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
 
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalClinic","name":"Family Health — Michael & Saini Care","legalName":"Michael & Saini NP PC","description":"Nurse practitioner–led primary care for patients of every age in New Hyde Park, NY. Medicare and NY Medicaid accepted.","telephone":"+1-646-623-1099","email":"michaelfamilyhealthpc@gmail.com","medicalSpecialty":["FamilyPractice","Pediatric"],"address":{"@type":"PostalAddress","streetAddress":"381 Old Courthouse Road","addressLocality":"New Hyde Park","addressRegion":"NY","postalCode":"11040","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:30","closes":"18:00"}],"availableService":[{"@type":"MedicalProcedure","name":"Newborn and infant care"},{"@type":"MedicalProcedure","name":"Well-child visits and vaccinations"},{"@type":"MedicalProcedure","name":"School and sports physicals"},{"@type":"MedicalProcedure","name":"Sick visits"},{"@type":"MedicalProcedure","name":"Adult physicals and screenings"},{"@type":"MedicalProcedure","name":"Women's wellness"},{"@type":"MedicalProcedure","name":"Chronic condition management"},{"@type":"MedicalProcedure","name":"Senior primary care"}],"areaServed":[{"@type":"Place","name":"New Hyde Park, NY"},{"@type":"Place","name":"Nassau County, NY"}]}
+{"@context":"https://schema.org","@type":"MedicalClinic","name":"Family Health — Michael & Saini Care","legalName":"Michael & Saini NP PC","description":"Family primary care for patients of every age in New Hyde Park, NY. Medicare and NY Medicaid accepted.","telephone":"+1-646-623-1099","email":"michaelfamilyhealthpc@gmail.com","medicalSpecialty":["FamilyPractice","Pediatric"],"address":{"@type":"PostalAddress","streetAddress":"381 Old Courthouse Road","addressLocality":"New Hyde Park","addressRegion":"NY","postalCode":"11040","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:30","closes":"18:00"}],"availableService":[{"@type":"MedicalProcedure","name":"Newborn and infant care"},{"@type":"MedicalProcedure","name":"Well-child visits and vaccinations"},{"@type":"MedicalProcedure","name":"School and sports physicals"},{"@type":"MedicalProcedure","name":"Sick visits"},{"@type":"MedicalProcedure","name":"Adult physicals and screenings"},{"@type":"MedicalProcedure","name":"Women's wellness"},{"@type":"MedicalProcedure","name":"Chronic condition management"},{"@type":"MedicalProcedure","name":"Senior primary care"}],"areaServed":[{"@type":"Place","name":"New Hyde Park, NY"},{"@type":"Place","name":"Nassau County, NY"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
