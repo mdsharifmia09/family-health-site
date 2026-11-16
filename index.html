@@ -852,10 +852,11 @@ html{scroll-padding-top:96px}
 /* ===== Mobile hero: logo wall in flow, centered headline ===== */
 .hero-wall{display:none}
 @media (max-width:600px){
-  .hero h1{text-align:center}
-  .hero-wall{display:block;order:1;margin:4px -18px 0;aspect-ratio:1.745/1;background:url("images/hero-wall-mobile.jpg") center/cover no-repeat;
-    -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 86%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 86%,transparent 100%)}
-  .hero-portraits{margin-top:3vw}
+  .hero{padding-top:4px}
+  .hero h1{text-align:center;font-size:clamp(30px,8.6vw,36px);line-height:1.04;margin:0 0 2px}
+  .hero-wall{display:block;order:1;margin:0 -18px;height:36vw;background:url("images/hero-wall-mobile.jpg") center/auto 100% no-repeat;
+    -webkit-mask-image:radial-gradient(ellipse 31% 62% at 50% 50%,#000 74%,transparent 100%);mask-image:radial-gradient(ellipse 31% 62% at 50% 50%,#000 74%,transparent 100%)}
+  .hero-portraits{margin-top:1vw}
 }
 /* ===== Mobile top bar: one slim line ===== */
 @media (max-width:760px){
