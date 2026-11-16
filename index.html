@@ -890,6 +890,12 @@ html{scroll-padding-top:96px}
   nav.main a{white-space:nowrap;font-size:13.5px;padding-left:9px;padding-right:9px}
   .hero-portraits{margin-top:clamp(290px,24vw,320px)}
 }
+/* ===== Mobile hero: first screen ends at the name cards; centered names ===== */
+@media (max-width:600px){
+  .hero p.lead{margin-top:max(60px,calc(100svh - 112px - 120vw))}
+  .hero-portraits figcaption{text-align:center}
+  .hero-portraits figcaption b::after{margin:7px auto 0}
+}
 /* ===== Mobile top bar: one slim line ===== */
 @media (max-width:760px){
   .util .wrap{padding-top:5px;padding-bottom:5px;flex-wrap:nowrap}
