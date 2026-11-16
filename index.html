@@ -856,6 +856,28 @@ html{scroll-padding-top:96px}
 .hero-portraits figure:nth-child(1){animation-delay:.55s}
 .hero-portraits figure:nth-child(2){animation-delay:1.05s}
 @media (prefers-reduced-motion:reduce){.hero-portraits figure{animation:none!important}}
+
+/* ===== Telehealth ===== */
+.tele{background:linear-gradient(180deg,#fff,var(--bg-soft))}
+.tele-card{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;background:#fff;border:1px solid rgba(38,128,127,.14);border-radius:28px;box-shadow:var(--shadow-lg);padding:44px}
+.tele-pill{display:inline-flex;align-items:center;gap:8px;background:var(--red-soft);color:var(--blue);font-weight:700;font-size:13px;letter-spacing:.04em;padding:7px 15px;border-radius:999px;margin-bottom:16px}
+.tele-pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sky);box-shadow:0 0 0 0 rgba(79,179,179,.55);animation:statusPulse 2s ease-out infinite}
+.tele h2{font-family:var(--serif);font-size:clamp(27px,3.6vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.16;color:var(--ink);margin-bottom:13px}
+.tele p.tele-lead{font-size:16.5px;color:var(--ink-mid);max-width:520px}
+.tele-feats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0 28px;max-width:520px}
+.tele-feat{display:flex;align-items:center;gap:12px;background:var(--bg-soft);border:1px solid rgba(38,128,127,.12);border-radius:16px;padding:14px 16px;font-weight:700;color:var(--ink);font-size:15px}
+.tele-feat .ic{flex:0 0 auto;display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#fff;color:var(--blue);box-shadow:0 6px 14px -8px rgba(38,128,127,.5)}
+.tele-note{margin-top:14px;font-size:13px;color:var(--ink-soft)}
+.tele-art{position:relative;border-radius:22px;background:linear-gradient(150deg,#1a2332,#26807f);padding:22px;color:#fff;box-shadow:0 30px 60px -30px rgba(15,27,45,.5)}
+.tele-screen{border-radius:16px;overflow:hidden;position:relative;aspect-ratio:4/3;background:#243349}
+.tele-screen img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
+.tele-self{position:absolute;right:12px;bottom:12px;width:30%;aspect-ratio:4/3;border-radius:12px;background:linear-gradient(150deg,#4fb3b3,#a8dadc);border:2px solid #fff;display:grid;place-items:center;color:#1a2332}
+.tele-bar{display:flex;justify-content:center;gap:12px;margin-top:16px}
+.tele-bar span{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25)}
+.tele-bar span.end{background:#e8605a;border-color:#e8605a}
+@media (max-width:860px){.tele-card{grid-template-columns:1fr;gap:28px;padding:26px 20px;border-radius:22px}.tele-art{order:-1}}
+@media (max-width:480px){.tele-feats{grid-template-columns:1fr}.tele-card .btn{width:100%}}
+@media (prefers-reduced-motion:reduce){.tele-pill::before{animation:none}}
 /* ===== Interactive layer ===== */
 #scrollbar{position:fixed;top:0;left:0;right:0;height:3px;z-index:300;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#26807f,#4fb3b3 55%,#58b6a3);pointer-events:none}
 header{transition:box-shadow .25s,background .25s}
@@ -1151,6 +1173,29 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
   </div>
 </section>
 
+<section id="telehealth" class="tele">
+  <div class="wrap">
+    <div class="tele-card reveal">
+      <div>
+        <span class="tele-pill">Virtual care</span>
+        <h2>Healthcare Made More <span class="gt">Convenient</span></h2>
+        <p class="tele-lead">Connect with our providers from the comfort of your home.</p>
+        <div class="tele-feats">
+          <div class="tele-feat"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg></span>Secure video visits</div>
+          <div class="tele-feat"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M8 2v4M16 2v4M3 10h18M9 15l2 2 4-4"/></svg></span>Easy scheduling</div>
+        </div>
+        <a class="btn btn-primary" data-link="telehealth" href="tel:+16466231099"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg><span>Request a Telehealth Visit</span><svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <p class="tele-note">Michael &amp; Saini Care P.C. | Family Health</p>
+      </div>
+      <div class="tele-art" aria-hidden="true">
+        <div class="tele-screen"><img loading="lazy" decoding="async" src="images/provider-samuel-michael.jpg" alt="">
+          <div class="tele-self"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></svg></div></div>
+        <div class="tele-bar"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg></span><span class="end"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M3 15c5-5 13-5 18 0l-3 3-3-2v-2a10 10 0 0 0-6 0v2l-3 2z"/></svg></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="ages">
   <div class="wrap">
     <div class="sec-head center reveal">
@@ -1368,7 +1413,7 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
   
   window.openNav=function(){document.getElementById('mnav').classList.add('open');};
   window.closeNav=function(){document.getElementById('mnav').classList.remove('open');};
-  var LINKS={booking:'',portal:'',pay:''}; /* paste the Tebra URLs here */
+  var LINKS={booking:'',portal:'',pay:'',telehealth:''}; /* paste the Tebra URLs here */
   document.querySelectorAll('[data-link]').forEach(function(el){
     var k=el.getAttribute('data-link').replace('-online','');
     if(!LINKS[k]) return;
