@@ -24,7 +24,7 @@
 <meta name="twitter:title" content="Family Health — Michael &amp; Saini Care">
 <meta name="twitter:description" content="Your Family. Your Health. Our Commitment. Family primary care in New Hyde Park, NY.">
 <meta name="twitter:image" content="images/og-image.png">
-<meta name="theme-color" content="#26807f">
+<meta name="theme-color" content="#1F4E9C">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
@@ -40,24 +40,24 @@
 
 <style>
 :root{
-  --blue:#26807f; --blue-deep:#1a2332; --sky:#4fb3b3; --red:#26807f; --red-soft:#e3f4f1;
-  --coral:#5fb3b6; --coral-deep:#1f6a6a;
-  --peach:#3a9ea3; --peach-deep:#2b7f84;
-  --mint:#58b6a3; --mint-deep:#2f8a78;
-  --pink:#3b9aa8; --pink-deep:#237b88;
-  --violet:#46657a; --violet-deep:#2f4a5c;
-  --ink:#1a2332; --ink-mid:#4A5868; --ink-soft:#8B97A6; --navy:#1a2332; --navy-soft:#243349; --green:#2f8a78; --cream:#f6fbf4; --text-muted:#667085; --border:#edf0f4;
-  --line:#E4E9F0; --bg:#FFFFFF; --bg-soft:#f1faee; --bg-tint:#e3f4f1;
+  --blue:#1F4E9C; --blue-deep:#14305F; --sky:#3E9FDB; --red:#1F4E9C; --red-soft:#EAF4FB;
+  --coral:#4F9FDC; --coral-deep:#17407F;
+  --peach:#2F86C8; --peach-deep:#2468A8;
+  --mint:#5AA9E6; --mint-deep:#2A6FB5;
+  --pink:#3A8FD0; --pink-deep:#1E5F9E;
+  --violet:#46608A; --violet-deep:#2E4668;
+  --ink:#14305F; --ink-mid:#4A5868; --ink-soft:#8B97A6; --navy:#14305F; --navy-soft:#1B3F7A; --green:#2A6FB5; --cream:#F8FBFE; --text-muted:#667085; --border:#edf0f4;
+  --line:#E4E9F0; --bg:#FFFFFF; --bg-soft:#F5F9FD; --bg-tint:#EAF4FB;
   --display:'Inter','Noto Sans SC',system-ui,sans-serif;
   --body:'Inter','Noto Sans SC',system-ui,sans-serif;
   --radius:22px; --radius-sm:14px;
   --serif:'Cormorant Garamond',Georgia,'Noto Sans SC',serif;
-  --shadow-sm:0 2px 8px rgba(15,27,45,.06);
-  --shadow:0 18px 50px -18px rgba(15,27,45,.22);
-  --shadow-lg:0 48px 110px -34px rgba(15,27,45,.42);
+  --shadow-sm:0 2px 8px rgba(12,24,52,.06);
+  --shadow:0 18px 50px -18px rgba(12,24,52,.22);
+  --shadow-lg:0 48px 110px -34px rgba(12,24,52,.42);
   --maxw:1200px;
-  --grad-vivid:linear-gradient(100deg,#1a2332 0%,#26807f 58%,#4fb3b3 118%);
-  --grad-soft:linear-gradient(100deg,#e3f4f1,#eef7ee 50%,#e3f4f1);
+  --grad-vivid:linear-gradient(100deg,#14305F 0%,#1F4E9C 58%,#3E9FDB 118%);
+  --grad-soft:linear-gradient(100deg,#EAF4FB,#EEF4FA 50%,#EAF4FB);
   color-scheme:light only;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -69,7 +69,7 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 h1,h2,h3,h4{font-family:var(--display);line-height:1.1;font-weight:700;letter-spacing:-.02em}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-.gt,.gv{color:#1a2332}
+.gt,.gv{color:#14305F}
 .gb{color:var(--blue-deep)}
 @supports ((-webkit-background-clip:text) or (background-clip:text)){
   .gt,.gv{background:var(--grad-vivid);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
@@ -81,8 +81,8 @@ html[lang="zh"] .gv{color:var(--violet-deep)}
 .skip{position:absolute;left:-999px;top:0;background:var(--blue);color:#fff;padding:10px 16px;z-index:1000;border-radius:0 0 8px 0}
 .skip:focus{left:0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--body);font-weight:700;font-size:15px;padding:13px 22px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:.2s;white-space:nowrap;min-height:46px}
-.btn-primary{background:linear-gradient(100deg,var(--blue),var(--sky));color:#fff;box-shadow:0 10px 24px -8px rgba(38,128,127,.55)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px -8px rgba(38,128,127,.65)}
+.btn-primary{background:linear-gradient(100deg,var(--blue),var(--sky));color:#fff;box-shadow:0 10px 24px -8px rgba(31,78,156,.55)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px -8px rgba(31,78,156,.65)}
 .btn-ghost{background:#fff;color:var(--blue);border-color:var(--line)}
 .btn-ghost:hover{border-color:var(--blue);background:var(--bg-tint)}
 .util{background:var(--ink);color:#cdd7e3;font-size:13.5px}
@@ -113,7 +113,7 @@ nav.main a:hover{color:var(--blue);background:var(--bg-tint)}
 .hamb span{display:block;width:20px;height:2px;background:var(--ink);position:relative}
 .hamb span::before,.hamb span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink)}
 .hamb span::before{top:-6px}.hamb span::after{top:6px}
-.mnav{position:fixed;inset:0;z-index:120;background:rgba(15,27,45,.5);opacity:0;visibility:hidden;transition:.25s}
+.mnav{position:fixed;inset:0;z-index:120;background:rgba(12,24,52,.5);opacity:0;visibility:hidden;transition:.25s}
 .mnav.open{opacity:1;visibility:visible}
 .mnav-panel{position:absolute;right:0;top:0;height:100%;width:min(360px,90vw);background:#fff;padding:22px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:.3s;overflow-y:auto}
 .mnav.open .mnav-panel{transform:translateX(0)}
@@ -123,10 +123,10 @@ nav.main a:hover{color:var(--blue);background:var(--bg-tint)}
 .mnav .langtog{border-color:var(--line);margin:10px 0 6px;align-self:flex-start}
 .mnav .lang-btn{color:var(--ink-mid)}
 .mnav .lang-btn.active{background:var(--blue);color:#fff}
-.hero{position:relative;padding:58px 0 66px;background:radial-gradient(900px 500px at 85% -10%,rgba(38,128,127,.05),transparent 60%),radial-gradient(700px 500px at -5% 20%,rgba(130,134,140,.07),transparent 55%),linear-gradient(180deg,var(--bg-soft),#fff)}
+.hero{position:relative;padding:58px 0 66px;background:radial-gradient(900px 500px at 85% -10%,rgba(31,78,156,.05),transparent 60%),radial-gradient(700px 500px at -5% 20%,rgba(130,134,140,.07),transparent 55%),linear-gradient(180deg,var(--bg-soft),#fff)}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-sm);color:var(--blue-deep);font-weight:700;font-size:13px;padding:7px 15px;border-radius:999px;margin-bottom:20px}
-.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(88,182,163,.18);flex:0 0 8px}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(90,169,230,.18);flex:0 0 8px}
 .hero h1{font-family:var(--serif);font-size:clamp(42px,6vw,72px);font-weight:700;letter-spacing:-.03em;line-height:1.0;color:var(--ink);margin-bottom:18px}
 .hero p.lead{font-size:18px;color:var(--ink-mid);max-width:540px;margin-bottom:24px}
 .hero-cta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:28px}
@@ -137,7 +137,7 @@ nav.main a:hover{color:var(--blue);background:var(--bg-tint)}
 .docs-mini .d b{display:block;font-family:var(--display);font-size:15px;color:var(--ink)}
 .docs-mini .d span{font-size:12.5px;color:var(--ink-soft)}
 .docs-mini .sep{width:1px;height:38px;background:var(--line)}
-.hero-card{background:#fff;border:1px solid rgba(38,128,127,.12);border-radius:28px;box-shadow:var(--shadow-lg);padding:24px}
+.hero-card{background:#fff;border:1px solid rgba(31,78,156,.12);border-radius:28px;box-shadow:var(--shadow-lg);padding:24px}
 .hero-portraits{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
 .hero-portraits figure{border-radius:18px;overflow:hidden;position:relative;background:var(--bg-soft)}
 .hero-portraits img{aspect-ratio:1/1.05;object-fit:cover;width:100%}
@@ -145,8 +145,8 @@ nav.main a:hover{color:var(--blue);background:var(--bg-tint)}
 .hero-portraits figcaption b{font-family:var(--display);font-size:14.5px;display:block;line-height:1.15}
 .hero-portraits figcaption span{font-size:11px;color:#9FB0C4;opacity:1;display:block;line-height:1.3;min-height:2.6em}
 .hl{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.hl div{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--ink-mid);background:linear-gradient(110deg,#c7e7e5,#dff1ee 28%,#ECEFF2 50%,#dff1ee 72%,#c7e7e5);background-size:240% 240%;border:1px solid rgba(38,128,127,.34);border-radius:12px;padding:10px 12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 3px 12px -6px rgba(38,128,127,.18)}
-.hl svg{flex:0 0 18px;color:var(--blue);filter:drop-shadow(0 1px 2px rgba(38,128,127,.35))}
+.hl div{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--ink-mid);background:linear-gradient(110deg,#CFE2F3,#E3F0FA 28%,#ECEFF2 50%,#E3F0FA 72%,#CFE2F3);background-size:240% 240%;border:1px solid rgba(31,78,156,.34);border-radius:12px;padding:10px 12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 3px 12px -6px rgba(31,78,156,.18)}
+.hl svg{flex:0 0 18px;color:var(--blue);filter:drop-shadow(0 1px 2px rgba(31,78,156,.35))}
 .trust{background:var(--ink);color:#fff;padding:38px 0;position:relative;isolation:isolate;overflow:hidden}
 .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .trust .t{display:flex;align-items:center;gap:13px}
@@ -236,11 +236,11 @@ section{padding:76px 0}
 .iv-spaces{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px;max-width:1040px}
 .iv-spaces figure{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:16/10}
 .iv-spaces img{width:100%;height:100%;object-fit:cover;display:block}
-.iv-spaces figcaption{position:absolute;bottom:14px;left:14px;background:rgba(15,27,45,.78);color:#fff;font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px;backdrop-filter:blur(4px)}
+.iv-spaces figcaption{position:absolute;bottom:14px;left:14px;background:rgba(12,24,52,.78);color:#fff;font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px;backdrop-filter:blur(4px)}
 .well-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
 .well-photo{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3;position:relative}
 .well-photo img{width:100%;height:100%;object-fit:cover}
-.photo-tag{position:absolute;top:14px;left:14px;background:rgba(15,27,45,.78);color:#fff;font-weight:700;font-size:12px;padding:6px 13px;border-radius:999px;backdrop-filter:blur(4px);display:flex;align-items:center;gap:6px}
+.photo-tag{position:absolute;top:14px;left:14px;background:rgba(12,24,52,.78);color:#fff;font-weight:700;font-size:12px;padding:6px 13px;border-radius:999px;backdrop-filter:blur(4px);display:flex;align-items:center;gap:6px}
 .drips{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:22px;align-items:start}
 .drip{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:15px}
 .drip .dot{width:12px;height:12px;border-radius:50%;margin-bottom:9px}
@@ -262,8 +262,8 @@ section{padding:76px 0}
   .drip:hover .drip-more,.drip:focus-within .drip-more{max-height:360px;opacity:1;margin-top:10px}
 }
 .ing-photo{cursor:pointer}
-.ing-photo .ing-cue{position:absolute;bottom:14px;left:14px;background:rgba(15,27,45,.78);color:#fff;font-weight:700;font-size:12px;padding:6px 13px;border-radius:999px;backdrop-filter:blur(4px);display:flex;align-items:center;gap:6px;transition:opacity .25s;z-index:2}
-.ing-overlay{position:absolute;inset:0;background:linear-gradient(155deg,rgba(15,27,45,.95),rgba(29,78,216,.93));color:#fff;padding:24px 26px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;overflow:auto;display:flex;flex-direction:column;justify-content:center;gap:12px;z-index:3}
+.ing-photo .ing-cue{position:absolute;bottom:14px;left:14px;background:rgba(12,24,52,.78);color:#fff;font-weight:700;font-size:12px;padding:6px 13px;border-radius:999px;backdrop-filter:blur(4px);display:flex;align-items:center;gap:6px;transition:opacity .25s;z-index:2}
+.ing-overlay{position:absolute;inset:0;background:linear-gradient(155deg,rgba(12,24,52,.95),rgba(29,78,216,.93));color:#fff;padding:24px 26px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;overflow:auto;display:flex;flex-direction:column;justify-content:center;gap:12px;z-index:3}
 .ing-overlay .io-head{font-family:var(--display);font-weight:800;font-size:18px;margin-bottom:2px}
 .ing-overlay .io-group{display:grid;grid-template-columns:104px 1fr;gap:12px;align-items:baseline}
 .ing-overlay .io-cat{font-weight:800;letter-spacing:.05em;text-transform:uppercase;font-size:10px;color:#BFDBFE}
@@ -299,7 +299,7 @@ section{padding:76px 0}
 .gal-grid figure{border-radius:var(--radius-sm);overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow-sm);position:relative}
 .gal-grid img{width:100%;height:100%;object-fit:cover;transition:.4s}
 .gal-grid figure:hover img{transform:scale(1.07)}
-.gal-cap{position:absolute;left:0;bottom:0;right:0;padding:18px 12px 9px;background:linear-gradient(transparent,rgba(15,27,45,.7));color:#fff;font-size:12.5px;font-weight:600}
+.gal-cap{position:absolute;left:0;bottom:0;right:0;padding:18px 12px 9px;background:linear-gradient(transparent,rgba(12,24,52,.7));color:#fff;font-size:12.5px;font-weight:600}
 .rev-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:22px}
 .rev{flex:1 1 300px;max-width:360px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm)}
 .stars{color:#F59E0B;font-size:17px;letter-spacing:2px;margin-bottom:13px}
@@ -322,7 +322,7 @@ section{padding:76px 0}
 .ins-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
 .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-weight:600;font-size:14px;color:var(--ink-mid);transition:.3s}
 .chip.pulse{animation:pulse .6s ease}
-@keyframes pulse{0%{transform:scale(1)}40%{transform:scale(1.08);border-color:var(--blue);color:var(--blue);box-shadow:0 6px 18px -6px rgba(38,128,127,.5)}100%{transform:scale(1)}}
+@keyframes pulse{0%{transform:scale(1)}40%{transform:scale(1.08);border-color:var(--blue);color:var(--blue);box-shadow:0 6px 18px -6px rgba(31,78,156,.5)}100%{transform:scale(1)}}
 .ins-note{font-size:13px;color:var(--ink-soft)}
 .visit{background:var(--ink);color:#fff}
 .visit .sec-head h2{color:#fff}
@@ -338,7 +338,7 @@ section{padding:76px 0}
 .hours-card.flash{box-shadow:0 0 0 4px rgba(14,165,233,.4),var(--shadow)}
 .hours-card h3{font-size:20px;margin-bottom:6px}
 .hours-card .sub{font-size:13px;color:var(--mint-deep);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:7px}
-.hours-card .sub .dot{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(88,182,163,.2)}
+.hours-card .sub .dot{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(90,169,230,.2)}
 .hrow{display:flex;justify-content:space-between;padding:7px 10px;border-radius:9px;font-size:13.5px}
 .hrow.today{background:var(--bg-tint);font-weight:700;color:var(--blue-deep)}
 .hrow .day{color:var(--ink-mid)}
@@ -451,7 +451,7 @@ body{border-top:4px solid transparent;border-image:var(--grad-vivid) 1}
 .hero-bg::after{content:"";position:absolute;inset:0;background:
   linear-gradient(90deg,rgba(255,255,255,.44) 0%,rgba(255,255,255,.9) 16%,rgba(255,255,255,.965) 40%,rgba(255,255,255,.965) 60%,rgba(255,255,255,.9) 84%,rgba(255,255,255,.44) 100%)}
 .hero .wrap{position:relative;z-index:1}
-.badge-new{display:inline-flex;align-items:center;gap:8px;background:#e8f6f1;border:1px solid #bfe3d6;color:var(--mint-deep);font-weight:700;font-size:13px;padding:7px 14px;border-radius:999px;margin-bottom:14px}
+.badge-new{display:inline-flex;align-items:center;gap:8px;background:#EAF3FB;border:1px solid #C5DBF0;color:var(--mint-deep);font-weight:700;font-size:13px;padding:7px 14px;border-radius:999px;margin-bottom:14px}
 .badge-new .pd{width:9px;height:9px;border-radius:50%;background:var(--mint);position:relative;flex:0 0 9px}
 .badge-new .pd::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--mint);opacity:.5;animation:ping 1.8s ease-out infinite}
 @keyframes ping{0%{transform:scale(.6);opacity:.7}100%{transform:scale(1.6);opacity:0}}
@@ -462,8 +462,8 @@ body{border-top:4px solid transparent;border-image:var(--grad-vivid) 1}
 .dcard{display:grid;grid-template-columns:300px 1fr;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:.25s}
 .dcard:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
 .dcard-side{position:relative;padding:24px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:14px;overflow:hidden}
-.dcard-side.g1{background:linear-gradient(150deg,#1a2332,#4fb3b3)}
-.dcard-side.g2{background:linear-gradient(150deg,#16323a,#3a9ea3)}
+.dcard-side.g1{background:linear-gradient(150deg,#14305F,#3E9FDB)}
+.dcard-side.g2{background:linear-gradient(150deg,#122A4F,#2F86C8)}
 .dcard-side::before{content:"";position:absolute;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.12);top:-70px;right:-60px}
 .dcard-side::after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.08);bottom:-50px;left:-40px}
 .dcard-side .ph{width:196px;height:196px;border-radius:50%;object-fit:cover;border:5px solid rgba(255,255,255,.55);box-shadow:0 12px 30px rgba(0,0,0,.22);position:relative;z-index:1}
@@ -506,16 +506,16 @@ body{border-top:4px solid transparent;border-image:var(--grad-vivid) 1}
 /* persistent mobile call bar */
 .mobile-cta{display:none}
 @media(max-width:980px){
-  .mobile-cta{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:88;padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);box-shadow:0 -10px 28px -14px rgba(15,27,45,.30)}
+  .mobile-cta{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:88;padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);box-shadow:0 -10px 28px -14px rgba(12,24,52,.30)}
   .mobile-cta .btn{min-height:50px}
   .mobile-cta .btn.call{flex:1.7}
   .mobile-cta .btn.book{flex:1}
   body{padding-bottom:76px}
   .totop{bottom:90px;width:44px;height:44px}
 }
-.callsheet{position:fixed;inset:0;z-index:130;background:rgba(15,27,45,.5);opacity:0;visibility:hidden;transition:.25s}
+.callsheet{position:fixed;inset:0;z-index:130;background:rgba(12,24,52,.5);opacity:0;visibility:hidden;transition:.25s}
 .callsheet.open{opacity:1;visibility:visible}
-.callsheet-panel{position:absolute;left:0;right:0;bottom:0;max-width:440px;margin-left:auto;margin-right:auto;background:#fff;border-radius:20px 20px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:10px;transform:translateY(100%);transition:.3s;box-shadow:0 -10px 30px -12px rgba(15,27,45,.4)}
+.callsheet-panel{position:absolute;left:0;right:0;bottom:0;max-width:440px;margin-left:auto;margin-right:auto;background:#fff;border-radius:20px 20px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:10px;transform:translateY(100%);transition:.3s;box-shadow:0 -10px 30px -12px rgba(12,24,52,.4)}
 .callsheet.open .callsheet-panel{transform:translateY(0)}
 .callsheet-title{font-weight:800;font-size:15px;color:var(--ink);text-align:center;margin-bottom:4px}
 .callsheet-cancel{background:none;border:none;color:var(--ink-soft);font-weight:600;font-size:15px;padding:10px;cursor:pointer;margin-top:2px}
@@ -526,32 +526,32 @@ body{border-top:4px solid transparent;border-image:var(--grad-vivid) 1}
 /* ===== Hero polish: depth + gentle life ===== */
 @keyframes heroIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @keyframes heroDrift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(1.5%,-2%,0) scale(1.05)}}
-.hero .wrap::before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:-14% -10% -8%;background:radial-gradient(34% 26% at 16% 10%,rgba(38,128,127,.16),transparent 62%),radial-gradient(38% 30% at 86% 16%,rgba(130,134,140,.13),transparent 64%),radial-gradient(44% 34% at 60% 104%,rgba(130,134,140,.10),transparent 62%);animation:heroDrift 24s ease-in-out infinite alternate;will-change:transform}
+.hero .wrap::before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:-14% -10% -8%;background:radial-gradient(34% 26% at 16% 10%,rgba(31,78,156,.16),transparent 62%),radial-gradient(38% 30% at 86% 16%,rgba(130,134,140,.13),transparent 64%),radial-gradient(44% 34% at 60% 104%,rgba(130,134,140,.10),transparent 62%);animation:heroDrift 24s ease-in-out infinite alternate;will-change:transform}
 .hero-card,.hero-eyebrows,.hero h1,.hero p.lead,.hero-cta{animation:heroIn .85s cubic-bezier(.2,.7,.2,1) both}
 .hero-eyebrows{animation-delay:.05s}
 .hero-card{animation-delay:.1s}
 .hero h1{animation-delay:.14s}
 .hero p.lead{animation-delay:.22s}
 .hero-cta{animation-delay:.3s}
-.hero-card{box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 2px 8px rgba(38,128,127,.05),0 40px 90px -34px rgba(15,27,45,.36);border-color:rgba(38,128,127,.12)}
+.hero-card{box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 2px 8px rgba(31,78,156,.05),0 40px 90px -34px rgba(12,24,52,.36);border-color:rgba(31,78,156,.12)}
 .hero-portraits figure{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
 @media(hover:hover){.hero-portraits figure:hover{transform:translateY(-3px)}}
 @media(max-width:600px){
-.hero .wrap::before{inset:-8% -16% -4%;background:radial-gradient(46% 22% at 14% 6%,rgba(38,128,127,.18),transparent 60%),radial-gradient(52% 26% at 90% 12%,rgba(130,134,140,.14),transparent 62%),radial-gradient(58% 28% at 50% 102%,rgba(130,134,140,.10),transparent 60%)}
-.hero-portraits img{box-shadow:0 12px 28px -12px rgba(15,27,45,.42);border:2px solid #fff}
+.hero .wrap::before{inset:-8% -16% -4%;background:radial-gradient(46% 22% at 14% 6%,rgba(31,78,156,.18),transparent 60%),radial-gradient(52% 26% at 90% 12%,rgba(130,134,140,.14),transparent 62%),radial-gradient(58% 28% at 50% 102%,rgba(130,134,140,.10),transparent 60%)}
+.hero-portraits img{box-shadow:0 12px 28px -12px rgba(12,24,52,.42);border:2px solid #fff}
 }
 @media (prefers-reduced-motion:reduce){
 .hero .wrap::before,.hero-card,.hero-eyebrows,.hero h1,.hero p.lead,.hero-cta{animation:none!important}
 }
 /* ===== Intro reveal (logo -> fade to hero) ===== */
-#intro{position:fixed;inset:0;z-index:100000;display:flex;align-items:center;justify-content:center;background:radial-gradient(900px 620px at 50% 40%,#fff,#f1faee 70%,#e6f3ee);animation:introOut 1.4s ease forwards}
-#intro img{width:min(66vw,330px);height:auto;animation:introLogo 1.15s cubic-bezier(.2,.7,.2,1) both;filter:drop-shadow(0 12px 30px rgba(38,128,127,.14))}
+#intro{position:fixed;inset:0;z-index:100000;display:flex;align-items:center;justify-content:center;background:radial-gradient(900px 620px at 50% 40%,#fff,#F5F9FD 70%,#E8F1F9);animation:introOut 1.4s ease forwards}
+#intro img{width:min(66vw,330px);height:auto;animation:introLogo 1.15s cubic-bezier(.2,.7,.2,1) both;filter:drop-shadow(0 12px 30px rgba(31,78,156,.14))}
 @keyframes introLogo{0%{opacity:0;transform:translateY(12px) scale(.93)}26%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:1;transform:translateY(0) scale(1.015)}}
 @keyframes introOut{0%{opacity:1;visibility:visible}66%{opacity:1}100%{opacity:0;visibility:hidden}}
 #intro.intro-skip{opacity:0!important;visibility:hidden;pointer-events:none;transition:opacity .4s ease}
 /* ===== Clickable hero portraits -> doctor bios ===== */
 .hero-portraits .portrait-link{display:block;position:static;color:inherit;text-decoration:none;cursor:pointer;border-radius:inherit;outline:none}
-.hero-portraits .portrait-link:focus-visible{outline:3px solid rgba(38,128,127,.6);outline-offset:3px}
+.hero-portraits .portrait-link:focus-visible{outline:3px solid rgba(31,78,156,.6);outline-offset:3px}
 .dcard{scroll-margin-top:104px}
 /* ===== Badge shimmer + staggered reveal ===== */
 @keyframes boxShimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
@@ -575,8 +575,8 @@ html.badges-go .hl div:nth-child(4){transition-delay:.92s}
 
 @media (prefers-reduced-motion:reduce){.interlude-media{background-attachment:scroll}}
 .interlude-veil{position:absolute;inset:0;z-index:-1;background:
-  radial-gradient(60% 90% at 50% 108%,rgba(38,128,127,.28),transparent 62%),
-  linear-gradient(180deg,rgba(9,15,27,.78),rgba(15,27,45,.58) 46%,rgba(20,24,48,.82))}
+  radial-gradient(60% 90% at 50% 108%,rgba(31,78,156,.28),transparent 62%),
+  linear-gradient(180deg,rgba(8,18,44,.78),rgba(12,24,52,.58) 46%,rgba(16,28,64,.82))}
 .interlude-inner{position:relative;z-index:2;padding:104px 24px;text-align:center;max-width:880px}
 .int-kicker{font-weight:700;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-bottom:26px}
 .int-kicker::before,.int-kicker::after{content:"";display:inline-block;width:34px;height:1px;background:rgba(255,255,255,.4);vertical-align:middle;margin:0 14px}
@@ -598,7 +598,7 @@ html.badges-go .hl div:nth-child(4){transition-delay:.92s}
 .visit::before{content:"";position:absolute;inset:0;z-index:-2;
   background:url('images/hero-bg-mobile.jpg') center 58%/cover no-repeat;filter:saturate(.35) brightness(.78)}
 .visit::after{content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(180deg,rgba(11,18,32,.95),rgba(15,27,45,.88) 55%,rgba(12,20,34,.95))}
+  background:linear-gradient(180deg,rgba(11,18,32,.95),rgba(12,24,52,.88) 55%,rgba(12,20,34,.95))}
 
 
 /* icon assets */
@@ -608,7 +608,7 @@ html.badges-go .hl div:nth-child(4){transition-delay:.92s}
 
 /* trust strip: faded welcome collage + icon assets */
 .trust::before{content:"";position:absolute;inset:-4%;z-index:-2;background:url('images/trust-bg.jpg') center 35%/cover no-repeat;filter:saturate(.78) brightness(.92) contrast(1.04);animation:welcomeDrift 26s ease-in-out infinite alternate;will-change:transform}
-.trust::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(52% 140% at 85% 50%,rgba(38,128,127,.22),transparent 62%),linear-gradient(100deg,rgba(11,18,32,.7) 0%,rgba(11,18,32,.48) 32%,rgba(11,18,32,.4) 62%,rgba(11,18,32,.64) 100%)}
+.trust::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(52% 140% at 85% 50%,rgba(31,78,156,.22),transparent 62%),linear-gradient(100deg,rgba(11,18,32,.7) 0%,rgba(11,18,32,.48) 32%,rgba(11,18,32,.4) 62%,rgba(11,18,32,.64) 100%)}
 .trust .t .ic img{width:24px;height:24px;object-fit:contain;filter:brightness(1.3) saturate(1.05)}
 
 
@@ -641,7 +641,7 @@ html.badges-go .hl div:nth-child(4){transition-delay:.92s}
    ============================================================ */
 
 /* --- top utility bar: navy gradient + clock on the Open-7-Days pill --- */
-.util{background:linear-gradient(135deg,#1a2332,#243349)}
+.util{background:linear-gradient(135deg,#14305F,#1B3F7A)}
 .util-right .pill{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.22)}
 .util-right .pill::before{content:"";width:13px;height:13px;flex:0 0 13px;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23ffffff%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Ccircle%20cx%3D%2712%27%20cy%3D%2712%27%20r%3D%279%27%2F%3E%3Cpolyline%20points%3D%2712%207%2012%2012%2015.5%2014%27%2F%3E%3C%2Fsvg%3E")}
 
@@ -654,7 +654,7 @@ html[lang="zh"] .hero h1 .gt{-webkit-text-fill-color:var(--red);color:var(--red)
 /* --- CTA buttons (global): chevron + gradient primary --- */
 .btn .lead-ic,.btn .chev{flex:0 0 auto}
 .btn .chev{opacity:.9}
-.btn-primary{background:linear-gradient(135deg,#26807f,#4fb3b3)}
+.btn-primary{background:linear-gradient(135deg,#1F4E9C,#3E9FDB)}
 
 /* ---- mockup treatment v2: shared (desktop + mobile) ---- */
 .hero{background:linear-gradient(180deg,var(--cream),#fff)}
@@ -662,18 +662,18 @@ html[lang="zh"] .hero h1 .gt{-webkit-text-fill-color:var(--red);color:var(--red)
   background:url("images/hero-bg.jpg") no-repeat 62% 0/cover}
 .hero-bg img{display:none}
 
-.hero-bg::after{background:linear-gradient(90deg,rgba(244,250,246,.97) 0%,rgba(241,250,244,.93) 40%,rgba(227,244,241,.5) 55%,rgba(38,128,127,.05) 72%,rgba(38,128,127,.12) 100%),
+.hero-bg::after{background:linear-gradient(90deg,rgba(245,249,253,.97) 0%,rgba(240,247,253,.93) 40%,rgba(234,244,251,.5) 55%,rgba(31,78,156,.05) 72%,rgba(31,78,156,.12) 100%),
   linear-gradient(180deg,rgba(255,255,255,0) 72%,#fff 100%)}
 /* cutout doctor figures with overlapping white cards */
 .hero-card{background:transparent;border:none;box-shadow:none;padding:0}
 .hero-portraits{align-items:start}
 .hero-portraits figure{background:none;border-radius:0;overflow:visible;box-shadow:none;position:relative}
 .hero-portraits img{width:100%;height:auto;aspect-ratio:auto;border-radius:0;border:none;box-shadow:none;
-  filter:drop-shadow(0 22px 30px rgba(26,35,50,.22));
+  filter:drop-shadow(0 22px 30px rgba(20,48,95,.22));
   -webkit-mask-image:linear-gradient(180deg,#000 96%,rgba(0,0,0,0) 100%);mask-image:linear-gradient(180deg,#000 96%,rgba(0,0,0,0) 100%)}
 .hero-portraits figcaption{position:relative;z-index:2;background:rgba(255,255,255,.94);color:var(--navy);
   border-radius:20px;padding:15px 17px;margin:12px 2px 0;text-align:left;
-  box-shadow:0 14px 35px rgba(26,35,50,.12);border:1px solid rgba(255,255,255,.8);backdrop-filter:blur(8px)}
+  box-shadow:0 14px 35px rgba(20,48,95,.12);border:1px solid rgba(255,255,255,.8);backdrop-filter:blur(8px)}
 .hero-portraits figcaption b{font-family:var(--serif);font-weight:700;font-size:clamp(19px,1.9vw,27px);
   letter-spacing:-.02em;color:var(--navy);line-height:1.02;display:block;white-space:nowrap}
 .hero-portraits figcaption b::after{content:"";display:block;width:34px;height:3px;border-radius:999px;background:var(--red);margin:10px 0 10px}
@@ -699,21 +699,21 @@ html.badges-go .hero-portraits figure:nth-child(2){transition-delay:.75s}
   .hero-portraits figcaption span{display:flex;align-items:center}
 }
 .hl div{background:rgba(255,255,255,.9);border:1px solid var(--border);color:var(--navy);
-  box-shadow:0 14px 35px rgba(26,35,50,.08);animation:none;background-size:auto;border-radius:24px;font-weight:700}
+  box-shadow:0 14px 35px rgba(20,48,95,.08);animation:none;background-size:auto;border-radius:24px;font-weight:700}
 .hl div svg,.hl div .hl-ic{background:var(--red-soft);border-radius:50%;padding:6px;width:40px;height:40px;flex:0 0 40px;object-fit:contain;color:var(--red);filter:none;box-shadow:none}
 @media(max-width:980px){
   .hero-card{order:2}
   .docs-mini{display:none}
 }
 /* secondary CTA per spec: white, navy text, red icon */
-.btn-ghost{color:var(--navy);border-color:var(--border);box-shadow:0 14px 32px rgba(26,35,50,.08)}
+.btn-ghost{color:var(--navy);border-color:var(--border);box-shadow:0 14px 32px rgba(20,48,95,.08)}
 .btn-ghost .lead-ic,.btn-ghost .chev{color:var(--red)}
 
 /* ---- welcome collage: varied sizes + gentle float ---- */
 .welcome-collage{padding:0;display:grid;gap:14px;
   grid-template-columns:1.15fr 1fr 1fr;grid-template-rows:190px 165px 185px;
   grid-template-areas:"a b d" "a e c" "f f c"}
-.welcome-collage .wc{margin:0;border-radius:18px;overflow:hidden;box-shadow:0 24px 50px rgba(26,35,50,.18);position:relative;animation:wcFloat 9s ease-in-out infinite alternate;will-change:transform}
+.welcome-collage .wc{margin:0;border-radius:18px;overflow:hidden;box-shadow:0 24px 50px rgba(20,48,95,.18);position:relative;animation:wcFloat 9s ease-in-out infinite alternate;will-change:transform}
 .welcome-collage .wc img{width:100%;height:100%;object-fit:cover;display:block}
 .welcome-collage .wc.a{grid-area:a;animation-duration:10s}
 .welcome-collage .wc.b{grid-area:b;animation-delay:1.2s}
@@ -724,7 +724,7 @@ html.badges-go .hero-portraits figure:nth-child(2){transition-delay:.75s}
 .welcome-collage .wc.f img{object-position:center 28%}
 .welcome-collage .wc.d img{object-position:center 30%}
 .welcome-collage .wc.a img{transform:scaleX(-1)}
-.welcome-collage .wc:hover{box-shadow:0 22px 48px rgba(26,35,50,.18)}
+.welcome-collage .wc:hover{box-shadow:0 22px 48px rgba(20,48,95,.18)}
 @media(max-width:600px){
   .welcome-collage{grid-template-columns:1.08fr 1fr;grid-template-rows:170px 150px 150px 165px;
     grid-template-areas:"a b" "a c" "d c" "e f";gap:11px}
@@ -745,7 +745,7 @@ html.badges-go .hero-portraits figure:nth-child(2){transition-delay:.75s}
 .iv-card.iv-left,.iv-card.iv-right{filter:brightness(.96) saturate(.97)}
 .iv-card.iv-left:hover,.iv-card.iv-right:hover{filter:none;box-shadow:var(--shadow-lg)}
 @keyframes ivPop{from{opacity:.35;transform:scale(.985)}to{opacity:1;transform:none}}
-.iv-tag{position:absolute;bottom:12px;left:12px;background:rgba(15,27,45,.78);color:#fff;font-weight:700;font-size:12.5px;padding:6px 13px;border-radius:999px;backdrop-filter:blur(4px)}
+.iv-tag{position:absolute;bottom:12px;left:12px;background:rgba(12,24,52,.78);color:#fff;font-weight:700;font-size:12.5px;padding:6px 13px;border-radius:999px;backdrop-filter:blur(4px)}
 .iv-card.iv-left .iv-tag,.iv-card.iv-right .iv-tag{font-size:11px;padding:5px 11px;bottom:9px;left:9px}
 .iv-ctrl{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:16px}
 .iv-btn{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--ink-mid);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s;box-shadow:var(--shadow-sm)}
@@ -772,7 +772,7 @@ html.badges-go .hero-portraits figure:nth-child(2){transition-delay:.75s}
      below the portraits for the lead/tiles/CTAs. */
   .hero-bg::after{background:
     linear-gradient(180deg,rgba(255,255,255,0) 50%,rgba(255,255,255,.9) 62%,#fff 70%),
-    linear-gradient(180deg,rgba(246,251,244,.55) 0%,rgba(246,251,244,.2) 12%,rgba(246,251,244,0) 20%)}
+    linear-gradient(180deg,rgba(248,251,254,.55) 0%,rgba(248,251,254,.2) 12%,rgba(248,251,254,0) 20%)}
 
   /* reflow order per mockup */
   .hero-grid{display:flex;flex-direction:column;gap:0;align-items:stretch}
@@ -790,9 +790,9 @@ html.badges-go .hero-portraits figure:nth-child(2){transition-delay:.75s}
   /* overlapping cutout figures, staggered cards */
   .hero-portraits{gap:12px;grid-template-columns:1fr 1fr;align-items:start}
   .hero-portraits figure{overflow:visible}
-  .hero-portraits img{width:100%;margin:0;max-width:none;clip-path:none;filter:drop-shadow(0 12px 18px rgba(26,35,50,.18))}
+  .hero-portraits img{width:100%;margin:0;max-width:none;clip-path:none;filter:drop-shadow(0 12px 18px rgba(20,48,95,.18))}
   .hero-portraits figcaption{position:relative;bottom:auto;margin:8px 0 0;z-index:2;border-radius:16px;padding:12px 13px;
-    box-shadow:0 12px 30px rgba(26,35,50,.12)}
+    box-shadow:0 12px 30px rgba(20,48,95,.12)}
   .hero-portraits figcaption b{font-size:clamp(14px,4.1vw,17px);white-space:nowrap}
   .hero-portraits figcaption b::after{margin:6px 0 6px;width:30px;height:3px}
   .hero-portraits figcaption span{font-size:11px;line-height:1.35;min-height:2.9em}
@@ -801,28 +801,28 @@ html.badges-go .hero-portraits figure:nth-child(2){transition-delay:.75s}
   .hl{grid-template-columns:1fr 1fr;gap:13px}
   .hl div{flex-direction:row;align-items:center;gap:10px;min-height:64px;background:rgba(255,255,255,.92);
     border:1px solid var(--border);border-radius:22px;padding:13px 12px;color:var(--navy);font-weight:700;
-    font-size:12.5px;letter-spacing:-.015em;line-height:1.25;box-shadow:0 14px 35px rgba(26,35,50,.08)}
+    font-size:12.5px;letter-spacing:-.015em;line-height:1.25;box-shadow:0 14px 35px rgba(20,48,95,.08)}
   .hl div svg,.hl div .hl-ic{flex:0 0 42px;width:42px;height:42px;padding:7px}
 
   /* pills */
   .hero-eyebrows{display:flex;flex-wrap:nowrap;gap:10px;align-items:stretch;justify-content:center}
   .hero-eyebrows .eyebrow,.hero-eyebrows .badge-new{margin:0;flex:1 1 0;min-width:0;justify-content:center;text-align:center;
     font-size:11.5px;font-weight:700;line-height:1.2;padding:10px 8px;border-radius:999px;background:rgba(255,255,255,.9);
-    border:1px solid var(--border);box-shadow:0 10px 26px rgba(26,35,50,.07);color:var(--navy)}
+    border:1px solid var(--border);box-shadow:0 10px 26px rgba(20,48,95,.07);color:var(--navy)}
   .hero-eyebrows .eyebrow-ic,.hero-eyebrows .pd-img{width:17px;height:17px;flex:0 0 17px}
-  .hero-eyebrows .badge-new{background:#e8f6f1;color:#087d55;border-color:#d3efe6}
+  .hero-eyebrows .badge-new{background:#EAF3FB;color:#1F4E9C;border-color:#D6E6F5}
 
   /* CTAs */
   .hero-cta{flex-direction:column;gap:12px;margin-top:2px}
   .hero-cta .btn{width:100%;flex:1 1 100%;position:relative;justify-content:center;min-height:66px;font-size:17.5px;font-weight:800;border-radius:999px;padding:14px 44px}
   .hero-cta .btn .chev{position:absolute;right:22px;top:50%;transform:translateY(-50%);opacity:.95}
-  .hero-cta .btn-primary{order:1;background:linear-gradient(135deg,#26807f,#4fb3b3);box-shadow:0 20px 40px rgba(38,128,127,.28)}
-  .hero-cta .btn-ghost{order:2;min-height:60px;font-size:18px;color:var(--navy);background:#fff;border:1px solid var(--border);box-shadow:0 14px 32px rgba(26,35,50,.08)}
+  .hero-cta .btn-primary{order:1;background:linear-gradient(135deg,#1F4E9C,#3E9FDB);box-shadow:0 20px 40px rgba(31,78,156,.28)}
+  .hero-cta .btn-ghost{order:2;min-height:60px;font-size:18px;color:var(--navy);background:#fff;border:1px solid var(--border);box-shadow:0 14px 32px rgba(20,48,95,.08)}
 }
 
 /* recolor red icon artwork to the logo blue */
-img[src*="family-heart"],img[src*="badge-globe"],img[src*="badge-shield"],img[src*="-v2"],img[src*="icon-patients"],img[src*="badge-care"],.eyebrow-ic{filter:hue-rotate(176deg) saturate(1.05)}
-.trust .t .ic img[src*="family-heart"],.trust .t .ic img[src*="badge-globe"]{filter:hue-rotate(176deg) brightness(1.4)}
+img[src*="family-heart"],img[src*="badge-globe"],img[src*="badge-shield"],img[src*="-v2"],img[src*="icon-patients"],img[src*="badge-care"],.eyebrow-ic{filter:hue-rotate(214deg) saturate(1.05)}
+.trust .t .ic img[src*="family-heart"],.trust .t .ic img[src*="badge-globe"]{filter:hue-rotate(214deg) brightness(1.4)}
 
 .hero-portraits{grid-template-columns:repeat(2,minmax(0,1fr))}
 .hero-portraits figcaption b{font-size:clamp(16px,1.3vw,20px);white-space:normal;overflow-wrap:normal}
@@ -834,14 +834,14 @@ img[src*="family-heart"],img[src*="badge-globe"],img[src*="badge-shield"],img[sr
 
 /* ===== Polish pass ===== */
 html{scroll-padding-top:96px}
-:where(a,button,summary,[tabindex]):focus-visible{outline:3px solid #4fb3b3;outline-offset:3px;border-radius:10px}
+:where(a,button,summary,[tabindex]):focus-visible{outline:3px solid #3E9FDB;outline-offset:3px;border-radius:10px}
 .welcome h2{margin-bottom:14px}
-.hl div .hl-ic{filter:hue-rotate(176deg) saturate(1.05);background:#FCEBEF}
+.hl div .hl-ic{filter:hue-rotate(214deg) saturate(1.05);background:#FCEBEF}
 /* "Our Promise": keep the lit sign visible but give the centered text a calm, readable field */
 .interlude-veil{background:
-  radial-gradient(54% 62% at 50% 52%,rgba(12,20,28,.62),rgba(12,20,28,.28) 62%,transparent 100%),
-  radial-gradient(60% 90% at 50% 108%,rgba(38,128,127,.28),transparent 62%),
-  linear-gradient(180deg,rgba(9,15,27,.78),rgba(15,27,45,.58) 46%,rgba(20,24,48,.82))}
+  radial-gradient(54% 62% at 50% 52%,rgba(8,20,48,.62),rgba(8,20,48,.28) 62%,transparent 100%),
+  radial-gradient(60% 90% at 50% 108%,rgba(31,78,156,.28),transparent 62%),
+  linear-gradient(180deg,rgba(8,18,44,.78),rgba(12,24,52,.58) 46%,rgba(16,28,64,.82))}
 .int-quote,.int-sign,.int-points div,.int-kicker{text-shadow:0 1px 14px rgba(6,14,34,.75)}
 /* phone: keep provider names on one line in the hero cards */
 @media (max-width:600px){
@@ -862,7 +862,7 @@ html{scroll-padding-top:96px}
 @media (min-width:601px) and (max-width:980px){
   .hero{padding:18px 0 56px;background:linear-gradient(180deg,var(--cream),#fff)}
   .hero-bg{inset:auto;top:0;left:0;right:0;height:1020px;background:url("images/hero-bg-mobile2.jpg") no-repeat center top/100% 100%}
-  .hero-bg::after{background:linear-gradient(180deg,rgba(255,255,255,0) 52%,rgba(255,255,255,.9) 66%,#fff 76%),linear-gradient(180deg,rgba(246,251,244,.55) 0%,rgba(246,251,244,.2) 10%,rgba(246,251,244,0) 18%)}
+  .hero-bg::after{background:linear-gradient(180deg,rgba(255,255,255,0) 52%,rgba(255,255,255,.9) 66%,#fff 76%),linear-gradient(180deg,rgba(248,251,254,.55) 0%,rgba(248,251,254,.2) 10%,rgba(248,251,254,0) 18%)}
   .hero-grid{display:flex;flex-direction:column;gap:0;align-items:stretch;max-width:680px;margin:0 auto}
   .hero-grid > div{display:contents}
   .hero h1{order:1;text-align:center;font-size:clamp(44px,6.4vw,54px);line-height:1.04;margin:0 0 4px;letter-spacing:-.03em}
@@ -870,8 +870,8 @@ html{scroll-padding-top:96px}
     -webkit-mask-image:radial-gradient(ellipse 175px 62% at 50% 50%,#000 74%,transparent 100%);mask-image:radial-gradient(ellipse 175px 62% at 50% 50%,#000 74%,transparent 100%)}
   .hero-portraits{order:2;margin:6px 0 2px;gap:18px;grid-template-columns:1fr 1fr;align-items:start}
   .hero-portraits figure{overflow:visible}
-  .hero-portraits img{width:100%;margin:0;max-width:none;clip-path:none;filter:drop-shadow(0 12px 18px rgba(26,35,50,.18))}
-  .hero-portraits figcaption{position:relative;bottom:auto;margin:10px 0 0;z-index:2;border-radius:18px;padding:14px 16px;box-shadow:0 12px 30px rgba(26,35,50,.12)}
+  .hero-portraits img{width:100%;margin:0;max-width:none;clip-path:none;filter:drop-shadow(0 12px 18px rgba(20,48,95,.18))}
+  .hero-portraits figcaption{position:relative;bottom:auto;margin:10px 0 0;z-index:2;border-radius:18px;padding:14px 16px;box-shadow:0 12px 30px rgba(20,48,95,.12)}
   .hero-portraits figcaption b{font-size:19px;white-space:nowrap}
   .hero-portraits figcaption span{font-size:13px;min-height:0}
   .hero p.lead{order:3;font-size:18px;line-height:1.6;color:#506079;font-weight:500;margin:20px auto 6px;max-width:600px;text-align:center}
@@ -879,7 +879,7 @@ html{scroll-padding-top:96px}
   .hl div{flex-direction:row;align-items:center;gap:12px;min-height:68px;font-size:14.5px;padding:14px 16px;border-radius:22px}
   .hero-eyebrows{order:5;display:flex;flex-wrap:nowrap;gap:12px;justify-content:center;margin:0 0 20px}
   .hero-eyebrows .eyebrow,.hero-eyebrows .badge-new{margin:0;flex:1 1 0;justify-content:center;text-align:center;font-size:13px;padding:11px 12px;border-radius:999px;background:rgba(255,255,255,.9);border:1px solid var(--border);color:var(--navy)}
-  .hero-eyebrows .badge-new{background:#e8f6f1;color:#087d55;border-color:#d3efe6}
+  .hero-eyebrows .badge-new{background:#EAF3FB;color:#1F4E9C;border-color:#D6E6F5}
   .hero-cta{order:6;flex-direction:row;gap:14px;justify-content:center}
   .hero-cta .btn{flex:1 1 0;justify-content:center;min-height:60px;font-size:17px;font-weight:800;border-radius:999px;max-width:320px}
   .docs-mini{display:none}
@@ -900,7 +900,7 @@ html{scroll-padding-top:96px}
 .sec-head h2,.tele h2,.hero h1{text-wrap:balance}
 .sec-head p,.tele p.tele-lead{text-wrap:pretty}
 @media (max-width:600px){
-  .hero h1 .gt{color:#15605e;-webkit-text-fill-color:#15605e;text-shadow:0 1px 14px rgba(255,255,255,.85)}
+  .hero h1 .gt{color:#123F7E;-webkit-text-fill-color:#123F7E;text-shadow:0 1px 14px rgba(255,255,255,.85)}
   .hero h1{text-shadow:0 1px 14px rgba(255,255,255,.7)}
   .hero p.lead{color:#2c3a4d;font-size:16px;line-height:1.55}
   .sec-head{margin-bottom:34px}
@@ -918,19 +918,19 @@ html{scroll-padding-top:96px}
 
 /* ===== Telehealth ===== */
 .tele{background:linear-gradient(180deg,#fff,var(--bg-soft))}
-.tele-card{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;background:#fff;border:1px solid rgba(38,128,127,.14);border-radius:28px;box-shadow:var(--shadow-lg);padding:44px}
+.tele-card{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;background:#fff;border:1px solid rgba(31,78,156,.14);border-radius:28px;box-shadow:var(--shadow-lg);padding:44px}
 .tele-pill{display:inline-flex;align-items:center;gap:8px;background:var(--red-soft);color:var(--blue);font-weight:700;font-size:13px;letter-spacing:.04em;padding:7px 15px;border-radius:999px;margin-bottom:16px}
-.tele-pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sky);box-shadow:0 0 0 0 rgba(79,179,179,.55);animation:statusPulse 2s ease-out infinite}
+.tele-pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sky);box-shadow:0 0 0 0 rgba(62,159,219,.55);animation:statusPulse 2s ease-out infinite}
 .tele h2{font-family:var(--serif);font-size:clamp(27px,3.6vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.16;color:var(--ink);margin-bottom:13px}
 .tele p.tele-lead{font-size:16.5px;color:var(--ink-mid);max-width:520px}
 .tele-feats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0 28px;max-width:520px}
-.tele-feat{display:flex;align-items:center;gap:12px;background:var(--bg-soft);border:1px solid rgba(38,128,127,.12);border-radius:16px;padding:14px 16px;font-weight:700;color:var(--ink);font-size:15px}
-.tele-feat .ic{flex:0 0 auto;display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#fff;color:var(--blue);box-shadow:0 6px 14px -8px rgba(38,128,127,.5)}
+.tele-feat{display:flex;align-items:center;gap:12px;background:var(--bg-soft);border:1px solid rgba(31,78,156,.12);border-radius:16px;padding:14px 16px;font-weight:700;color:var(--ink);font-size:15px}
+.tele-feat .ic{flex:0 0 auto;display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#fff;color:var(--blue);box-shadow:0 6px 14px -8px rgba(31,78,156,.5)}
 .tele-note{margin-top:14px;font-size:13px;color:var(--ink-soft)}
-.tele-art{position:relative;border-radius:22px;background:linear-gradient(150deg,#1a2332,#26807f);padding:22px;color:#fff;box-shadow:0 30px 60px -30px rgba(15,27,45,.5)}
-.tele-screen{border-radius:16px;overflow:hidden;position:relative;aspect-ratio:4/3;background:#243349}
+.tele-art{position:relative;border-radius:22px;background:linear-gradient(150deg,#14305F,#1F4E9C);padding:22px;color:#fff;box-shadow:0 30px 60px -30px rgba(12,24,52,.5)}
+.tele-screen{border-radius:16px;overflow:hidden;position:relative;aspect-ratio:4/3;background:#1B3F7A}
 .tele-screen img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
-.tele-self{position:absolute;right:12px;bottom:12px;width:30%;aspect-ratio:4/3;border-radius:12px;background:linear-gradient(150deg,#4fb3b3,#a8dadc);border:2px solid #fff;display:grid;place-items:center;color:#1a2332}
+.tele-self{position:absolute;right:12px;bottom:12px;width:30%;aspect-ratio:4/3;border-radius:12px;background:linear-gradient(150deg,#3E9FDB,#9fb8e0);border:2px solid #fff;display:grid;place-items:center;color:#14305F}
 .tele-bar{display:flex;justify-content:center;gap:12px;margin-top:16px}
 .tele-bar span{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25)}
 .tele-bar span.end{background:#e8605a;border-color:#e8605a}
@@ -938,18 +938,18 @@ html{scroll-padding-top:96px}
 @media (max-width:480px){.tele-feats{grid-template-columns:1fr}.tele-card .btn{width:100%}}
 @media (prefers-reduced-motion:reduce){.tele-pill::before{animation:none}}
 /* ===== Interactive layer ===== */
-#scrollbar{position:fixed;top:0;left:0;right:0;height:3px;z-index:300;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#26807f,#4fb3b3 55%,#58b6a3);pointer-events:none}
+#scrollbar{position:fixed;top:0;left:0;right:0;height:3px;z-index:300;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#1F4E9C,#3E9FDB 55%,#5AA9E6);pointer-events:none}
 header{transition:box-shadow .25s,background .25s}
-header.scrolled{box-shadow:0 10px 30px -18px rgba(26,35,50,.45);background:rgba(255,255,255,.96)}
+header.scrolled{box-shadow:0 10px 30px -18px rgba(20,48,95,.45);background:rgba(255,255,255,.96)}
 nav.main a.active{color:var(--blue-deep);background:var(--bg-tint)}
 /* live open / closed status */
 .util .pill.status{display:inline-flex;align-items:center;gap:8px}
-.util .pill.status::before{content:"";width:8px;height:8px;border-radius:50%;background:#58b6a3;box-shadow:0 0 0 0 rgba(88,182,163,.55);animation:statusPulse 2s ease-out infinite}
-.util .pill.status.closed::before{background:#3a9ea3;box-shadow:0 0 0 0 rgba(58,158,163,.5)}
-@keyframes statusPulse{70%{box-shadow:0 0 0 8px rgba(88,182,163,0)}100%{box-shadow:0 0 0 0 rgba(88,182,163,0)}}
+.util .pill.status::before{content:"";width:8px;height:8px;border-radius:50%;background:#5AA9E6;box-shadow:0 0 0 0 rgba(90,169,230,.55);animation:statusPulse 2s ease-out infinite}
+.util .pill.status.closed::before{background:#2F86C8;box-shadow:0 0 0 0 rgba(47,134,200,.5)}
+@keyframes statusPulse{70%{box-shadow:0 0 0 8px rgba(90,169,230,0)}100%{box-shadow:0 0 0 0 rgba(90,169,230,0)}}
 /* cursor spotlight on cards */
-.svc:hover,.value:hover{background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(79,179,179,.14),transparent 62%),#fff}
-.vcard:hover{background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(79,179,179,.22),transparent 62%),rgba(255,255,255,.08)}
+.svc:hover,.value:hover{background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(62,159,219,.14),transparent 62%),#fff}
+.vcard:hover{background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(62,159,219,.22),transparent 62%),rgba(255,255,255,.08)}
 .value{transition:transform .22s,box-shadow .22s}
 .value:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .band{cursor:default}
@@ -957,15 +957,15 @@ nav.main a.active{color:var(--blue-deep);background:var(--bg-tint)}
 .hero-bg{transition:transform .5s cubic-bezier(.2,.7,.2,1);will-change:transform}
 /* gallery -> lightbox */
 .gal-grid figure{cursor:zoom-in}
-.gal-grid figure:focus-visible{outline:3px solid #4fb3b3;outline-offset:3px}
-#lb{position:fixed;inset:0;z-index:400;display:none;align-items:center;justify-content:center;background:rgba(12,20,28,.92);backdrop-filter:blur(6px);padding:24px}
+.gal-grid figure:focus-visible{outline:3px solid #3E9FDB;outline-offset:3px}
+#lb{position:fixed;inset:0;z-index:400;display:none;align-items:center;justify-content:center;background:rgba(8,20,48,.92);backdrop-filter:blur(6px);padding:24px}
 #lb.open{display:flex;animation:lbIn .25s ease both}
 @keyframes lbIn{from{opacity:0}to{opacity:1}}
 #lb figure{margin:0;max-width:min(1100px,92vw);text-align:center}
 #lb img{max-width:100%;max-height:78vh;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.5);object-fit:contain;animation:lbZoom .3s cubic-bezier(.2,.7,.2,1) both}
 @keyframes lbZoom{from{transform:scale(.96);opacity:.4}to{transform:none;opacity:1}}
 #lb figcaption{color:#fff;margin-top:14px;font-weight:600;letter-spacing:.02em}
-#lb .lb-count{display:block;color:#a8dadc;font-size:12.5px;font-weight:500;margin-top:2px}
+#lb .lb-count{display:block;color:#9fb8e0;font-size:12.5px;font-weight:500;margin-top:2px}
 #lb button{position:absolute;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12);color:#fff;font-size:26px;line-height:1;cursor:pointer;transition:background .2s,transform .2s}
 #lb button:hover{background:rgba(255,255,255,.26);transform:scale(1.06)}
 #lb .lb-close{top:20px;right:20px}
@@ -975,7 +975,7 @@ nav.main a.active{color:var(--blue-deep);background:var(--bg-tint)}
 @media (prefers-reduced-motion:reduce){#scrollbar{display:none}.util .pill.status::before{animation:none}#lb img,#lb.open{animation:none}}
 
 /* ===== Mobile optimization ===== */
-html{-webkit-tap-highlight-color:rgba(38,128,127,.18)}
+html{-webkit-tap-highlight-color:rgba(31,78,156,.18)}
 button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
 @media (max-width:760px){
   .mobile-cta{padding-bottom:calc(10px + env(safe-area-inset-bottom))}
@@ -1035,7 +1035,7 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
   <div class="wrap">
     <div class="util-left">
       <a href="tel:+16466231099"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span><b class="util-loc">Call</b> 646-623-1099</span></a>
-      <a href="#locations"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>381 Old Courthouse Road, New Hyde Park, NY 11040</span></a>
+      <a href="#locations"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>1575 Hillside Avenue, Suites LL3 &amp; LL4, New Hyde Park, NY 11040</span></a>
     </div>
     <div class="util-right">
       <span class="pill status" id="openStatus">Open 7 Days · 9:30 AM – 6 PM</span>
@@ -1146,7 +1146,7 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
         <div class="value"><span class="ic"><img decoding="async" src="images/icon-family-heart.png" alt="Family care icon" width="50" height="50" loading="lazy"></span><h4>Whole Household</h4><p>Parents, kids and grandparents can all be seen by the same team.</p></div>
         <div class="value"><span class="ic"><img decoding="async" src="images/icon-open-7-days.png" alt="Open 7 Days icon" width="50" height="50" loading="lazy"></span><h4>Weekends Included</h4><p>Saturday and Sunday hours that fit around work and school.</p></div>
         <div class="value"><span class="ic"><img decoding="async" src="images/icon-insurance.png" alt="Insurance icon" width="50" height="50" loading="lazy"></span><h4>Coverage Questions</h4><p>We take Medicare, NY Medicaid and several commercial plans.</p></div>
-        <div class="value value-wide"><span class="ic ic-fill" style="background:linear-gradient(150deg,#1a2332,#26807f)"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10z"/></svg></span><h4>Come In or Log On</h4><p>New patients, walk-ins, same-day requests and video visits are all open to you.</p></div>
+        <div class="value value-wide"><span class="ic ic-fill" style="background:linear-gradient(150deg,#14305F,#1F4E9C)"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10z"/></svg></span><h4>Come In or Log On</h4><p>New patients, walk-ins, same-day requests and video visits are all open to you.</p></div>
       </div>
     </div>
   </div>
@@ -1285,7 +1285,7 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
         <div class="loc-photo"><img decoding="async" loading="lazy" src="images/building.jpg" alt="Family Health office building"><span class="loc-tag">New Hyde Park, NY</span></div>
         <div class="loc-body">
           <h3>Family Health — Michael &amp; Saini Care</h3>
-          <div class="addr">381 Old Courthouse Road, New Hyde Park, NY 11040</div>
+          <div class="addr">1575 Hillside Avenue, Suites LL3 &amp; LL4,<br>New Hyde Park, NY 11040</div>
           <div class="loc-meta">
             <div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>646-623-1099</span></div>
             <div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M7 4v5M17 4v5"/></svg><span>Every day, 9:30 AM to 6 PM</span></div>
@@ -1293,12 +1293,12 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
           </div>
           <div class="loc-actions">
             <a href="tel:+16466231099" class="btn btn-primary">Call the Office</a>
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=381+Old+Courthouse+Road%2C+New+Hyde+Park%2C+NY+11040" target="_blank" rel="noopener" class="btn btn-ghost">Get Directions</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1575+Hillside+Avenue%2C+New+Hyde+Park%2C+NY+11040" target="_blank" rel="noopener" class="btn btn-ghost">Get Directions</a>
           </div>
         </div>
       </div>
       <div class="loc reveal">
-        <iframe title="Map to Family Health, 381 Old Courthouse Road, New Hyde Park, NY" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0;width:100%;height:100%;min-height:340px;display:block" src="https://www.google.com/maps?q=381+Old+Courthouse+Road,+New+Hyde+Park,+NY+11040&amp;output=embed"></iframe>
+        <iframe title="Map to Family Health, 1575 Hillside Avenue, New Hyde Park, NY" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0;width:100%;height:100%;min-height:340px;display:block" src="https://www.google.com/maps?q=1575+Hillside+Avenue,+New+Hyde+Park,+NY+11040&amp;output=embed"></iframe>
       </div>
     </div>
   </div>
@@ -1339,7 +1339,7 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
     <div class="faq-list reveal">
       <div class="qa"><button onclick="toggleQA(this)"><span>Can I become a new patient?</span><span class="pm">+</span></button><div class="ans"><p>Yes. We are signing up new patients, and we also offer same-day, walk-in and video appointments. Call 646-623-1099 and we will get you started.</p></div></div>
       <div class="qa"><button onclick="toggleQA(this)"><span>Who can I bring with me?</span><span class="pm">+</span></button><div class="ans"><p>Everyone in the household. We see infants, children, teenagers, adults and seniors.</p></div></div>
-      <div class="qa"><button onclick="toggleQA(this)"><span>When are you open?</span><span class="pm">+</span></button><div class="ans"><p>Every day of the week, from 9:30 AM to 6 PM, at 381 Old Courthouse Road, New Hyde Park, NY 11040.</p></div></div>
+      <div class="qa"><button onclick="toggleQA(this)"><span>When are you open?</span><span class="pm">+</span></button><div class="ans"><p>Every day of the week, from 9:30 AM to 6 PM, at 1575 Hillside Avenue, Suites LL3 &amp; LL4, New Hyde Park, NY 11040.</p></div></div>
       <div class="qa"><button onclick="toggleQA(this)"><span>What is the best way to book?</span><span class="pm">+</span></button><div class="ans"><p>Phone us at 646-623-1099 during office hours, or schedule through Tebra.</p></div></div>
       <div class="qa"><button onclick="toggleQA(this)"><span>Will you take my insurance?</span><span class="pm">+</span></button><div class="ans"><p>We accept Medicare, New York Medicaid and a number of commercial plans. Because networks vary by plan and provider, please call 646-623-1099 so we can confirm yours.</p></div></div>
       <div class="qa"><button onclick="toggleQA(this)"><span>Can I see a provider by video?</span><span class="pm">+</span></button><div class="ans"><p>Yes. Video visits run on the Tebra telehealth platform. Call the office and we will set one up.</p></div></div>
@@ -1378,7 +1378,7 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
     <div class="visit-grid">
       <div class="visit-cards">
         <div class="vcard reveal"><div class="ic"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h4>Phone Us</h4><p>Call:</p><a href="tel:+16466231099">646-623-1099</a><p style="margin-top:6px">Appointments are made by phone or through Tebra.</p><a data-link="booking-online" href="#" hidden>Book online through Tebra →</a></div>
-        <div class="vcard reveal"><div class="ic"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h4>Drive or Walk Over</h4><p>Office:</p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=381+Old+Courthouse+Road%2C+New+Hyde+Park%2C+NY+11040" target="_blank" rel="noopener">381 Old Courthouse Road →</a><p style="margin-top:4px">New Hyde Park, NY 11040</p></div>
+        <div class="vcard reveal"><div class="ic"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h4>Drive or Walk Over</h4><p>Office:</p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=1575+Hillside+Avenue%2C+New+Hyde+Park%2C+NY+11040" target="_blank" rel="noopener">1575 Hillside Avenue, Suites LL3 &amp; LL4 →</a><p style="margin-top:4px">New Hyde Park, NY 11040</p></div>
         <div class="vcard reveal"><div class="ic"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h3"/></svg></div><h4>Online Tools</h4><p>Tebra powers our patient portal, online bill pay and video visits. Billing questions? Call 646-623-1099.</p><a data-link="portal" href="#" hidden>Patient portal →</a><a data-link="pay" href="#" hidden>Pay a bill →</a></div>
         <div class="vcard reveal"><div class="ic"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h4>First Time Here?</h4><p>You will fill out new-patient forms before you arrive. We will explain how when you book.</p></div>
       </div>
@@ -1418,7 +1418,7 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
       </div>
       <div class="foot-col">
         <h5>Visit</h5>
-        <p>381 Old Courthouse Road<br>New Hyde Park, NY 11040</p>
+        <p>1575 Hillside Avenue<br>Suites LL3 &amp; LL4<br>New Hyde Park, NY 11040</p>
         <p>Daily, 9:30 AM to 6 PM</p>
       </div>
       <div class="foot-col">
@@ -1445,13 +1445,13 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
 
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalClinic","name":"Family Health — Michael & Saini Care","legalName":"Michael & Saini NP PC","description":"Family primary care for patients of every age in New Hyde Park, NY. Medicare and NY Medicaid accepted.","telephone":"+1-646-623-1099","email":"michaelfamilyhealthpc@gmail.com","medicalSpecialty":["FamilyPractice","Pediatric"],"address":{"@type":"PostalAddress","streetAddress":"381 Old Courthouse Road","addressLocality":"New Hyde Park","addressRegion":"NY","postalCode":"11040","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:30","closes":"18:00"}],"availableService":[{"@type":"MedicalProcedure","name":"Newborn and infant care"},{"@type":"MedicalProcedure","name":"Well-child visits and vaccinations"},{"@type":"MedicalProcedure","name":"School and sports physicals"},{"@type":"MedicalProcedure","name":"Sick visits"},{"@type":"MedicalProcedure","name":"Adult physicals and screenings"},{"@type":"MedicalProcedure","name":"Women's wellness"},{"@type":"MedicalProcedure","name":"Chronic condition management"},{"@type":"MedicalProcedure","name":"Senior primary care"}],"areaServed":[{"@type":"Place","name":"New Hyde Park, NY"},{"@type":"Place","name":"Nassau County, NY"}]}
+{"@context":"https://schema.org","@type":"MedicalClinic","name":"Family Health — Michael & Saini Care","legalName":"Michael & Saini NP PC","description":"Family primary care for patients of every age in New Hyde Park, NY. Medicare and NY Medicaid accepted.","telephone":"+1-646-623-1099","email":"michaelfamilyhealthpc@gmail.com","medicalSpecialty":["FamilyPractice","Pediatric"],"address":{"@type":"PostalAddress","streetAddress":"1575 Hillside Avenue, Suites LL3 & LL4","addressLocality":"New Hyde Park","addressRegion":"NY","postalCode":"11040","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:30","closes":"18:00"}],"availableService":[{"@type":"MedicalProcedure","name":"Newborn and infant care"},{"@type":"MedicalProcedure","name":"Well-child visits and vaccinations"},{"@type":"MedicalProcedure","name":"School and sports physicals"},{"@type":"MedicalProcedure","name":"Sick visits"},{"@type":"MedicalProcedure","name":"Adult physicals and screenings"},{"@type":"MedicalProcedure","name":"Women's wellness"},{"@type":"MedicalProcedure","name":"Chronic condition management"},{"@type":"MedicalProcedure","name":"Senior primary care"}],"areaServed":[{"@type":"Place","name":"New Hyde Park, NY"},{"@type":"Place","name":"Nassau County, NY"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Are you accepting new patients?","acceptedAnswer":{"@type":"Answer","text":"Yes. New patients, same-day, walk-in and video visits are available. Call 646-623-1099."}},
 {"@type":"Question","name":"What ages do you see?","acceptedAnswer":{"@type":"Answer","text":"Family primary care from birth through older adulthood."}},
-{"@type":"Question","name":"What are your hours?","acceptedAnswer":{"@type":"Answer","text":"Monday through Sunday, 9:30 AM to 6 PM, at 381 Old Courthouse Road, New Hyde Park, NY 11040."}},
+{"@type":"Question","name":"What are your hours?","acceptedAnswer":{"@type":"Answer","text":"Monday through Sunday, 9:30 AM to 6 PM, at 1575 Hillside Avenue, Suites LL3 & LL4, New Hyde Park, NY 11040."}},
 {"@type":"Question","name":"Do you accept Medicare and insurance?","acceptedAnswer":{"@type":"Answer","text":"Yes — Medicare, New York Medicaid and select commercial plans. Call 646-623-1099 to verify your plan."}},
 {"@type":"Question","name":"Do you offer video visits?","acceptedAnswer":{"@type":"Answer","text":"Yes. Video visits are available through the Tebra telehealth platform."}}
 ]}
@@ -1540,7 +1540,7 @@ button,a.btn,.filter,.chip,.qa button{touch-action:manipulation}
 <div class="callsheet" id="callsheet" onclick="if(event.target===this)closeCallSheet()">
   <div class="callsheet-panel">
     <div class="callsheet-title">Call us to book</div>
-    <div style="font:800 28px/1.2 Montserrat,Inter,sans-serif;text-align:center;margin:4px 0 2px;color:#1a2332;user-select:all">646-623-1099</div>
+    <div style="font:800 28px/1.2 Montserrat,Inter,sans-serif;text-align:center;margin:4px 0 2px;color:#14305F;user-select:all">646-623-1099</div>
     <div style="text-align:center;font-size:13.5px;color:#4A5868;margin-bottom:8px">Open every day, 9:30 AM to 6 PM</div>
     <a href="tel:+16466231099" data-keep-tel class="btn btn-primary" onclick="closeCallSheet()"><span>Call now</span></a>
     <button type="button" class="callsheet-cancel" onclick="closeCallSheet()">Cancel</button>
